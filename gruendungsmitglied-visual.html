@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Erstelle dein persönliches LinkedIn-Visual als Gründungsmitglied des Health Network Hamburg e.V." />
+  <link rel="canonical" href="https://healthnetworkhamburg.de/gruendungsmitglied-visual" />
+  <meta property="og:title" content="Health Network Hamburg e.V." />
+  <meta property="og:description" content="Die Brückenplattform für Gesundheitsinnovation in Hamburg." />
+  <meta property="og:url" content="https://healthnetworkhamburg.de/gruendungsmitglied-visual" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <title>Gründungsmitglied – LinkedIn Visual – Health Network Hamburg e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/hnhh_favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/hnhh_favicon.svg">
+  <link rel="apple-touch-icon" href="/hnhh_favicon.svg">
+
+  <style>
+    :root {
+      --rot: #C8102E; --rot-dunkel: #a00d25; --rot-hell: #f5e8eb;
+      --weiss: #FFFFFF; --grau-leicht: #f7f7f7; --grau-mittel: #e0e0e0;
+      --text: #1a1a1a; --text-leicht: #555; --blau: #1A6FA8; --blau-hell: #EAF3FA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--weiss); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* HEADER */
+    header { background: var(--weiss); border-bottom: 3px solid var(--rot); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-area img { height: 56px; width: auto; }
+    .logo-text .name  { font-family: 'Montserrat',sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--rot); letter-spacing: -0.01em; display: block; }
+    .logo-text .tagline { font-size: 0.68rem; color: var(--text-leicht); letter-spacing: 0.06em; text-transform: uppercase; display: block; }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--rot); }
+    .nav-cta { background: var(--rot) !important; color: var(--weiss) !important; padding: 8px 18px !important; border-radius: 5px !important; font-weight: 700 !important; transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--rot-dunkel) !important; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); }
+
+    /* HERO */
+    .hero { background: #1a1a1a; border-bottom: 3px solid var(--rot); padding: 56px 40px 48px; background-size: cover; background-position: center 30%; position: relative; }
+    .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(105deg,rgba(8,8,8,0.72) 0%,rgba(8,8,8,0.45) 50%,rgba(8,8,8,0.18) 100%); pointer-events:none; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(2rem,4vw,3rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 14px; color: #fff; }
+    .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.82); line-height: 1.7; max-width: 620px; }
+
+    /* MAIN */
+    main { max-width: 1100px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 340px 1fr; gap: 48px; align-items: start; }
+
+    /* FORM PANEL */
+    .form-panel { background: var(--weiss); border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; }
+    .form-panel-header { background: var(--rot); color: var(--weiss); padding: 16px 22px; }
+    .form-panel-header h2 { font-size: 1rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    .form-panel-header p  { font-size: 0.78rem; opacity: 0.82; margin-top: 2px; }
+    .form-body { padding: 28px 24px; }
+
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-leicht); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 7px; }
+    .form-group input[type="text"] { width: 100%; padding: 11px 14px; border: 1.5px solid var(--grau-mittel); border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text); background: var(--weiss); transition: border-color 0.2s, box-shadow 0.2s; }
+    .form-group input[type="text"]:focus { outline: none; border-color: var(--rot); box-shadow: 0 0 0 3px rgba(200,16,46,0.08); }
+    .form-group input[type="text"]::placeholder { color: #bbb; }
+
+    /* Photo upload */
+    .upload-area { border: 2px dashed var(--grau-mittel); border-radius: 8px; padding: 24px 16px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; position: relative; }
+    .upload-area:hover { border-color: var(--rot); background: var(--rot-hell); }
+    .upload-area p     { font-size: 0.85rem; color: var(--text-leicht); line-height: 1.5; margin-top: 8px; }
+    .upload-area span  { color: var(--rot); font-weight: 600; }
+    .upload-area small { font-size: 0.75rem; color: #bbb; display: block; margin-top: 4px; }
+    .upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .upload-area.has-photo { border-color: var(--rot); background: var(--rot-hell); }
+    .upload-area.has-photo p { color: var(--rot-dunkel); font-weight: 600; }
+
+    .btn-primary { display: block; width: 100%; background: var(--rot); color: var(--weiss); border: none; border-radius: 6px; padding: 13px 24px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.15s; letter-spacing: 0.01em; margin-top: 4px; }
+    .btn-primary:hover { background: var(--rot-dunkel); transform: translateY(-2px); }
+    .btn-primary:disabled { background: #bbb; transform: none; cursor: not-allowed; }
+
+    .hint-box { background: var(--blau-hell); border-left: 3px solid var(--blau); border-radius: 0 6px 6px 0; padding: 12px 14px; margin-top: 14px; font-size: 0.8rem; color: var(--blau); line-height: 1.55; }
+    .hint-box strong { display: block; font-size: 0.78rem; margin-bottom: 3px; }
+
+    /* PREVIEW PANEL */
+    .preview-panel h2 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .canvas-wrap { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.13); max-width: 560px; }
+    #previewCanvas { display: block; width: 100%; height: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+    .preview-note { margin-top: 12px; font-size: 0.78rem; color: #999; line-height: 1.5; }
+
+    /* FOOTER */
+    footer { background: var(--text); color: rgba(255,255,255,0.65); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 20px; align-items: center; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--weiss); }
+    .footer-li svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.65); display: block; transition: fill 0.2s; }
+    .footer-li:hover svg { fill: var(--weiss); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      header { padding: 12px 18px; }
+      .logo-area img { height: 44px; }
+      nav { display: none; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--weiss); border-top: 1px solid var(--grau-mittel); box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 14px 0; }
+      nav.open { display: flex; }
+      nav a { padding: 11px 22px; border-bottom: 1px solid var(--grau-mittel); }
+      .nav-cta { margin: 10px 22px 4px !important; width: calc(100% - 44px); text-align: center; }
+      .hamburger { display: flex; }
+      .hero { padding: 36px 20px 28px; }
+      footer { padding: 20px 18px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+
+<header>
+  <a href="index.html" class="logo-area">
+    <img src="images/homepage/hnhh-logo.svg" alt="Health Network Hamburg e.V." />
+    <div class="logo-text">
+      <span class="name">Health Network Hamburg e.V.</span>
+      <span class="tagline">Gemeinsam für Gesundheit</span>
+    </div>
+  </a>
+  <div class="hamburger" id="hamburger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="events.html">Events</a>
+    <a href="neuigkeiten.html">Neuigkeiten</a>
+    <a href="mitglied-werden.html" class="nav-cta">Mitglied werden</a>
+  </nav>
+</header>
+
+<div class="hero" style="background-image:url('images/heros/mitglieder-visuals.jpg')">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Gründungsmitglied · Health Network Hamburg</div>
+    <h1>Dein Gründungsmitglieder-Visual</h1>
+    <p>Lade dein Foto hoch, trage deinen Namen ein – und lade dein fertiges LinkedIn-Bild als 1080 × 1080 px PNG herunter.</p>
+  </div>
+</div>
+
+<main>
+
+  <div class="form-panel">
+    <div class="form-panel-header">
+      <h2>Visual erstellen</h2>
+      <p>Gründungsmitglied · Health Network Hamburg</p>
+    </div>
+    <div class="form-body">
+
+    <div class="form-group">
+      <label>Dein Foto</label>
+      <div class="upload-area" id="uploadArea">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5" style="display:block;margin:0 auto">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <p><span>Foto auswählen</span> oder hierher ziehen</p>
+        <small>JPG / PNG · Portrait-Format empfohlen</small>
+        <input type="file" id="fileInput" accept="image/*">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Dein Name</label>
+      <input type="text" id="nameInput" placeholder="Vorname Nachname" oninput="renderCard()">
+    </div>
+    <div class="form-group">
+      <label>Rolle / Unternehmen <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem">(optional)</span></label>
+      <input type="text" id="roleInput" placeholder="z.B. CEO · HealthTech GmbH" oninput="renderCard()">
+    </div>
+    <button class="btn-primary" id="dlBtn" onclick="downloadPNG()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:7px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Als PNG herunterladen
+    </button>
+    <div class="hint-box">
+      <strong>&#x1F4BC; Auf LinkedIn teilen</strong>
+      Nach dem Download Beitrag erstellen, Bild hochladen und
+      <strong style="color:#1a1a1a">#HNHH #HealthNetworkHamburg</strong> ergänzen.
+    </div>
+    </div>
+  </div>
+
+  <div class="preview-panel">
+    <h2>Vorschau</h2>
+    <div class="canvas-wrap">
+      <canvas id="previewCanvas" width="1080" height="1080"></canvas>
+    </div>
+    <p class="preview-note">Das fertige Bild hat 1080 × 1080 px – ideal für LinkedIn und Instagram.</p>
+  </div>
+
+</main>
+
+
+<footer>
+  <div class="footer-copy">&copy; <span id="year"></span> Health Network Hamburg e.V.</div>
+  <div class="footer-links">
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="https://www.linkedin.com/groups/13128513/" target="_blank" class="footer-li" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── roundRect polyfill (Safari iOS < 16, older Android) ──────────────
+  if (typeof CanvasRenderingContext2D !== 'undefined' &&
+      !CanvasRenderingContext2D.prototype.roundRect) {
+    CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+      if (w < 2*r) r = w/2;
+      if (h < 2*r) r = h/2;
+      this.beginPath();
+      this.moveTo(x+r, y);
+      this.arcTo(x+w, y,   x+w, y+h, r);
+      this.arcTo(x+w, y+h, x,   y+h, r);
+      this.arcTo(x,   y+h, x,   y,   r);
+      this.arcTo(x,   y,   x+w, y,   r);
+      this.closePath();
+      return this;
+    };
+  }
+
+  // Drag & Drop
+  const uploadArea = document.getElementById('uploadArea');
+  uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.style.borderColor='#C8102E'; });
+  uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor=''; });
+  uploadArea.addEventListener('drop', e => {
+    e.preventDefault(); uploadArea.style.borderColor='';
+    const f = e.dataTransfer.files[0];
+    if (f && f.type.startsWith('image/')) handleFile(f);
+  });
+  document.getElementById('fileInput').addEventListener('change', e => {
+    if (e.target.files[0]) handleFile(e.target.files[0]);
+  });
+
+  function handleFile(file) {
+    const reader = new FileReader();
+    reader.onload = async ev => {
+      portraitImg = await loadImage(ev.target.result);
+      uploadArea.classList.add('has-photo');
+      uploadArea.querySelector('p').innerHTML = '<span>&#10003; Foto geladen</span>&ensp;&ndash;&ensp;anderes auswählen';
+      renderCard();
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function downloadPNG() {
+    const btn = document.getElementById('dlBtn');
+    const orig = btn.innerHTML;
+    btn.textContent = 'Wird erstellt …';
+    btn.disabled = true;
+    // Use requestAnimationFrame to let the button state paint before blocking
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const link = document.createElement('a');
+      link.download = DOWNLOAD_NAME;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      btn.innerHTML = orig;
+      btn.disabled = false;
+    }));
+  }
+
+
+  const SIZE = 1080;
+  const HH_RED = '#DA121A';
+  const canvas = document.getElementById('previewCanvas');
+  const ctx = canvas.getContext('2d');
+  const DOWNLOAD_NAME = 'HNHH_Gruendungsmitglied.png';
+
+  let portraitImg = null;
+  let logoImg     = null;
+
+  function loadImage(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload  = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  function drawImageCoverTop(ctx, img, x, y, w, h) {
+    const ir = img.naturalWidth / img.naturalHeight, br = w / h;
+    let sx, sy, sw, sh;
+    if (ir > br) { sh = img.naturalHeight; sw = sh*br; sx = (img.naturalWidth-sw)/2; sy = 0; }
+    else          { sw = img.naturalWidth;  sh = sw/br; sx = 0; sy = 0; }
+    ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+  }
+
+  function renderCard() {
+    const name = document.getElementById('nameInput').value || 'Dein Name';
+    const role = document.getElementById('roleInput').value || 'Gründungsmitglied · Health Network Hamburg';
+
+    ctx.clearRect(0, 0, SIZE, SIZE);
+
+    // Weißer Hintergrund
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, SIZE, SIZE);
+
+    // Foto rechts
+    if (portraitImg) {
+      ctx.save();
+      ctx.beginPath(); ctx.rect(SIZE/2,0,SIZE/2,SIZE); ctx.clip();
+      drawImageCoverTop(ctx, portraitImg, SIZE/2, 0, SIZE/2, SIZE);
+      ctx.restore();
+      const grad = ctx.createLinearGradient(SIZE/2, 0, SIZE/2+SIZE*0.22, 0);
+      grad.addColorStop(0,'rgba(255,255,255,1)');
+      grad.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.fillStyle=grad; ctx.fillRect(SIZE/2,0,SIZE/2,SIZE);
+    }
+
+    // Balken
+    ctx.fillStyle='#1a1a1a';
+    ctx.fillRect(0,0,SIZE,4);
+    ctx.fillRect(0,SIZE-4,SIZE,4);
+
+    // Logo
+    if (logoImg) {
+      const lW=190, lH=Math.round((logoImg.naturalHeight/logoImg.naturalWidth)*190);
+      ctx.drawImage(logoImg,68,44,lW,lH);
+    }
+
+    // FOUNDING MEMBER badge
+    const bY=380;
+    ctx.strokeStyle='#1a1a1a'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(80,bY); ctx.lineTo(108,bY); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(316,bY); ctx.lineTo(344,bY); ctx.stroke();
+    ctx.fillStyle='#1a1a1a'; ctx.font='bold 11px Arial';
+    ctx.fillText('FOUNDING MEMBER',116,bY+4);
+
+    // Headline
+    ctx.fillStyle='#1a1a1a'; ctx.font='bold 86px Arial'; ctx.fillText('Ich bin',80,474);
+    ctx.fillStyle='#555'; ctx.font='46px Arial'; ctx.fillText('Gründungsmitglied.',80,538);
+
+    // Divider
+    ctx.fillStyle='#1a1a1a'; ctx.fillRect(80,572,52,2);
+
+    // Tagline
+    ctx.fillStyle='#666'; ctx.font='17px Arial';
+    ['Vernetzung ist der Schlüssel zur Innovation im',
+     'Gesundheitswesen. Gemeinsam gestalten wir',
+     'Hamburg gesünder.'].forEach((l,i)=>ctx.fillText(l,80,616+i*30));
+
+    // Namensblock
+    ctx.fillStyle='#1a1a1a'; ctx.fillRect(80,726,3,62);
+    ctx.font='bold 24px Arial'; ctx.fillStyle='#1a1a1a'; ctx.fillText(name,100,754);
+    ctx.fillStyle='#999'; ctx.font='bold 11px Arial'; ctx.fillText(role.toUpperCase(),100,778);
+
+    // CTA
+    ctx.fillStyle='#aaa'; ctx.font='11px Arial'; ctx.fillText('NETZWERK BEITRETEN',80,858);
+    ctx.fillStyle=HH_RED; ctx.font='bold 17px Arial'; ctx.fillText('Werde auch Du Mitglied!',80,882);
+    const ctaW=ctx.measureText('Werde auch Du Mitglied!').width;
+    ctx.strokeStyle=HH_RED; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(80,887); ctx.lineTo(80+ctaW,887); ctx.stroke();
+    ctx.fillStyle='rgba(218,18,26,0.5)'; ctx.font='13px Arial';
+    ctx.fillText('healthnetworkhamburg.de',80,908);
+  }
+
+  async function init() {
+    try      { logoImg = await loadImage('images/homepage/hnhh-logo-transparent.png'); }
+    catch(e) { try { logoImg = await loadImage('images/homepage/hnhh-logo.svg'); } catch(_){
+               try { logoImg = await loadImage('hnhh_favicon.svg'); } catch(__){} } }
+    try      { portraitImg = await loadImage('images/gruendungsmitglieder/dummy.png'); }
+    catch(e) {}
+    renderCard();
+  }
+  init();
+
+</script>
+</body>
+</html>
