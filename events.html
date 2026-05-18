@@ -132,6 +132,12 @@
     .gallery-img:hover { opacity: 0.85; transform: scale(1.02); }
     .gallery-loading { padding: 24px; text-align: center; color: var(--text-leicht); font-size: 0.9rem; }
 
+    /* GALLERY YOUTUBE THUMBNAIL */
+    .gallery-yt-thumb { position: relative; cursor: pointer; border-radius: 6px; overflow: hidden; aspect-ratio: 4/3; display: block; }
+    .gallery-yt-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.2s, transform 0.2s; }
+    .gallery-yt-thumb:hover img { opacity: 0.85; transform: scale(1.02); }
+    .gallery-yt-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.28); color: white; font-size: 2.2rem; pointer-events: none; }
+
     /* LIGHTBOX */
     .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; overflow: hidden; }
     .lightbox.open { display: flex; }
@@ -426,6 +432,9 @@
   <span class="lightbox-close" onclick="closeLightbox()">✕</span>
   <span class="lightbox-nav lightbox-prev" onclick="lbNav(-1);event.stopPropagation()">‹</span>
   <img id="lightbox-img" src="" alt="" />
+  <div id="lightboxYT" style="display:none; width:min(90vw,800px); aspect-ratio:16/9;">
+    <iframe id="lightboxYTFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;border-radius:4px;"></iframe>
+  </div>
   <span class="lightbox-nav lightbox-next" onclick="lbNav(1);event.stopPropagation()">›</span>
 </div>
 
@@ -493,7 +502,8 @@
     "/images/aperos/aperos-9.jpg",
     "/images/aperos/aperos-10.JPG",
     "/images/aperos/aperos-11.JPG",
-    "/images/aperos/aperos-12.JPG"
+    "/images/aperos/aperos-12.JPG",
+    "yt:7eBYEYe3iyI"
   ],
 
   plenum: [
@@ -590,17 +600,22 @@ function renderGallery(id, urls) {
   CURRENT_GALLERY[id] = urls;
 
 
-  urls.forEach(function(url, i) {
-    var img = document.createElement('img');
-    img.src = url;
-    img.alt = 'Impression ' + (i + 1);
-    img.className = 'gallery-img';
-
-    img.onclick = function() {
-      openLightbox(id, i);
-    };
-
-    container.appendChild(img);
+ urls.forEach(function(url, i) {
+    if (url.indexOf('yt:') === 0) {
+      var ytId = url.slice(3);
+      var thumb = document.createElement('div');
+      thumb.className = 'gallery-yt-thumb';
+      thumb.innerHTML = '<img src="https://img.youtube.com/vi/' + ytId + '/mqdefault.jpg" alt="Video" /><div class="gallery-yt-play">▶</div>';
+      thumb.onclick = function() { openLightbox(id, i); };
+      container.appendChild(thumb);
+    } else {
+      var img = document.createElement('img');
+      img.src = url;
+      img.alt = 'Impression ' + (i + 1);
+      img.className = 'gallery-img';
+      img.onclick = function() { openLightbox(id, i); };
+      container.appendChild(img);
+    }
   });
 }
 
@@ -612,16 +627,27 @@ function renderGallery(id, urls) {
   function openLightbox(id, idx) {
     lbId = id;
     lbCurrent = idx;
-
-    var imgs = CURRENT_GALLERY[id];
-
-    document.getElementById('lightbox-img').src = imgs[idx];
+    var item = CURRENT_GALLERY[id][idx];
+    var imgEl   = document.getElementById('lightbox-img');
+    var ytWrap  = document.getElementById('lightboxYT');
+    var ytFrame = document.getElementById('lightboxYTFrame');
+    if (item.indexOf('yt:') === 0) {
+      imgEl.style.display = 'none';
+      ytFrame.src = 'https://www.youtube-nocookie.com/embed/' + item.slice(3) + '?rel=0&iv_load_policy=3&modestbranding=1&autoplay=1';
+      ytWrap.style.display = 'block';
+    } else {
+      ytWrap.style.display = 'none';
+      ytFrame.src = '';
+      imgEl.src = item;
+      imgEl.style.display = 'block';
+    }
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox(e) {
     if (e && e.target !== document.getElementById('lightbox') && e.target !== document.querySelector('.lightbox-close')) return;
+    document.getElementById('lightboxYTFrame').src = '';
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
@@ -630,11 +656,11 @@ function renderGallery(id, urls) {
     var imgs = CURRENT_GALLERY[lbId];
     if (!imgs) return;
     lbCurrent = ((lbCurrent + dir) % imgs.length + imgs.length) % imgs.length;
-    document.getElementById('lightbox-img').src = imgs[lbCurrent];
+    openLightbox(lbId, lbCurrent);
   }
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox({});
+    if (e.key === 'Escape') { document.getElementById('lightboxYTFrame').src = ''; closeLightbox({}); }
     if (e.key === 'ArrowRight') lbNav(1);
     if (e.key === 'ArrowLeft') lbNav(-1);
   });
