@@ -85,6 +85,7 @@
     .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .event-card { background: var(--weiss); border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
     .event-card:hover { border-color: var(--rot); }
+    .events-grid > .event-card:only-child { grid-column: 1 / -1; }
     .event-card-header { background: var(--rot); color: var(--weiss); padding: 16px 22px; display: flex; align-items: center; gap: 16px; }
     .event-number { font-family: 'Montserrat',sans-serif; font-size: 2rem; font-weight: 800; opacity: 0.35; line-height: 1; }
     .event-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-bottom: 2px; }
