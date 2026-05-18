@@ -85,6 +85,7 @@
     .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .event-card { background: var(--weiss); border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
     .event-card:hover { border-color: var(--rot); }
+    .events-grid > .event-card:only-child { grid-column: 1 / -1; }
     .event-card-header { background: var(--rot); color: var(--weiss); padding: 16px 22px; display: flex; align-items: center; gap: 16px; }
     .event-number { font-family: 'Montserrat',sans-serif; font-size: 2rem; font-weight: 800; opacity: 0.35; line-height: 1; }
     .event-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-bottom: 2px; }
@@ -158,7 +159,7 @@
     .footer-li svg { width: 20px; height: 20px; fill: #0A66C2; display: block; }
 
     @media (max-width: 900px) { .events-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .events-grid { grid-template-columns: 1fr; } .event-embed iframe { height: 560px; } /* etwas mehr Puffer für schmale Screens */ }
+    @media (max-width: 600px) { .events-grid { grid-template-columns: 1fr; } .event-embed iframe { height: 560px; } }
     @media (max-width: 768px) {
       header { padding: 12px 18px; }
       .logo-area img { height: 44px; }
@@ -211,87 +212,7 @@
     <h2>Kommende Events</h2>
     <div class="section-line"></div>
   </div>
-
-  <!--
-  <div class="events-grid">
-    <!-- Apéro 13 
-    <div class="event-card">
-      <div class="event-card-header">
-        <div class="event-number">13</div>
-        <div class="event-title-area">
-          <div class="event-label">Health Apéro</div>
-          <h3>Apéro No. 13</h3>
-        </div>
-      </div>
-      <div class="event-card-body">
-        <div class="event-embed">
-          <iframe src="https://luma.com/embed/event/evt-rN8f5oO0ejj8YVY/simple"
-            allow="fullscreen; payment" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-      </div>
-    </div>
--->
-
-    <!-- Apéro 14 -->
-    <div class="event-card">
-      <div class="event-card-header">
-        <div class="event-number">14</div>
-        <div class="event-title-area">
-          <div class="event-label">Health Apéro</div>
-          <h3>Apéro No. 14</h3>
-        </div>
-      </div>
-      <div class="event-card-body">
-        <div class="event-embed">
-          <iframe src="https://luma.com/embed/event/evt-c07JVOvFtn3FNht/simple"
-            allow="fullscreen; payment" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--
- Strategieworkshop Cirlce Leads #HNHH
-    <div class="event-card" style="margin-top: 20px;">
-      <div class="event-card-header">
-        <div class="event-number">15</div>
-        <div class="event-title-area">
-          <div class="event-label">Nur für Mitglieder</div>
-          <h3>1. Strategieworkshop Circle-Leads #HNHH</h3>
-        </div>
-      </div>
-      <div class="event-card-body">
-        <div style="padding: 24px 22px; display: flex; flex-direction: column; gap: 16px; min-height: 200px;">
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-leicht);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Dienstag, 28. April 2026
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-leicht);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              17.00 - 19.00 Uhr
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-leicht);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              Hybrid / Anmeldung über untenstehenden Link / Nur für Mitglieder des Health Network Hamburg e.V.
-            </div>
-          </div>
-          <div style="background: var(--rot-hell); border-radius: 6px; padding: 10px 14px; font-size: 0.82rem; color: var(--text-leicht); line-height: 1.55;">
-            Dieser Strategieworkshop ist ausschließlich für Mitglieder. Bitte meldet Euch über den Link an. Weitere Informationen folgen per E-Mail.
-          </div>
-          
-          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MGxlNG84YTMzaDgyaHIzZGlibzQ0aGE5cGsgdm9yc3RhbmRAaGVhbHRobmV0d29ya2hhbWJ1cmcuZGU&tmsrc=vorstand%40healthnetworkhamburg.de" target="_blank"
-            style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--rot); color: white; text-decoration: none; padding: 11px 20px; border-radius: 6px; font-size: 0.88rem; font-weight: 600; font-family: Inter, sans-serif; transition: background 0.2s; margin-top: auto;"
-            onmouseover="this.style.background='var(--rot-dunkel)'" onmouseout="this.style.background='var(--rot)'">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            In Google Kalender eintragen
-          </a>
-        </div>
-      </div>
-    </div>
-  -->
-  </div>
-
+  <div id="upcoming-container"><div class="gallery-loading">Wird geladen…</div></div>
 
   <!-- VERGANGENE EVENTS -->
   <div class="section-header">
@@ -299,131 +220,7 @@
     <div class="section-line"></div>
     <span class="section-badge">Rückblick</span>
   </div>
-
- <!-- Strategieworkshop 2 -->
-  <div class="past-event" id="pe-strategie2">
-    <div class="past-event-header" onclick="togglePast('strategie2')">
-      <div class="past-event-number">WS2</div>
-      <div class="past-event-info">
-        <div class="past-event-label">Workshop</div>
-        <div class="past-event-title">Strategie-Workshop II</div>
-        <div class="past-event-date">April 2026</div>
-      </div>
-      <div class="past-event-toggle" id="toggle-strategie2">▾</div>
-    </div>
-    <div class="past-event-body" id="body-strategie2">
-      <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        60 Mitglieder stellen hybrid die Circles für das Health Network Hamburg auf die Füße - Purpose, Rollen und Verantwortlichkeiten sind definiert!
-      </p>
-      <div style="margin-top:8px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen</h4>
-        <div class="gallery-grid" id="gallery-strategie2">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-        <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Fotos: <a href="https://healthnetworkhamburg.de/" target="_blank">Health Network Hamburg e.V.</a>
-      </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Strategieworkshop -->
-  <div class="past-event" id="pe-workshop">
-    <div class="past-event-header" onclick="togglePast('workshop')">
-      <div class="past-event-number">WS</div>
-      <div class="past-event-info">
-        <div class="past-event-label">Workshop</div>
-        <div class="past-event-title">Strategie-Workshop</div>
-        <div class="past-event-date">März 2026</div>
-      </div>
-      <div class="past-event-toggle" id="toggle-workshop">▾</div>
-    </div>
-    <div class="past-event-body" id="body-workshop">
-      <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Über 60 Gründungsmitglieder entwickelten gemeinsam die Zukunftsstrategie des Health Network Hamburg e.V. – 10 Circles, 4 Funktionslogiken, eine gemeinsame Vision.
-      </p>
-      <div class="pdf-embed">
-        <iframe src="https://drive.google.com/file/d/1DcNOT2HxRxR2Acfn3K2NUeJeZWGKmfjV/preview"
-          allow="autoplay" title="Ergebnispräsentation Strategie-Workshop"></iframe>
-      </div>
-      <p class="pdf-note">Das Dokument ist nur zur Ansicht verfügbar.</p>
-      <div style="margin-top:20px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen | Plenum</h4>
-        <div class="gallery-grid" id="gallery-plenum">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-      </div>
-      <div style="margin-top:20px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen | Workshop-Gruppen</h4>
-        <div class="gallery-grid" id="gallery-workshop">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-      </div>
-      <div style="margin-top:20px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen | Netzwerken </h4>
-        <div class="gallery-grid" id="gallery-netzwerk">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-      </div>
-      <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Fotos: <a href="https://liviatamaska.com/" target="_blank">Livia Támaska Photography</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Gründungsversammlung -->
-  <div class="past-event" id="pe-gruendung">
-    <div class="past-event-header" onclick="togglePast('gruendung')">
-      <div class="past-event-number">GV</div>
-      <div class="past-event-info">
-        <div class="past-event-label">Gründungsveranstaltung</div>
-        <div class="past-event-title">Gründungsversammlung</div>
-        <div class="past-event-date">Februar 2026</div>
-      </div>
-      <div class="past-event-toggle" id="toggle-gruendung">▾</div>
-    </div>
-    <div class="past-event-body" id="body-gruendung">
-      <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Die offizielle Gründung des Health Network Hamburg e.V. – der Startschuss für ein neues Netzwerk in der Metropolregion Hamburg.
-      </p>
-      <div style="margin-top:8px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen</h4>
-        <div class="gallery-grid" id="gallery-gruendung">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-        <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Fotos: <a href="https://liviatamaska.com/" target="_blank">Livia Támaska Photography</a>
-      </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Apéros 1-13 -->
-  <div class="past-event" id="pe-aperos">
-    <div class="past-event-header" onclick="togglePast('aperos')">
-      <div class="past-event-number">1–13</div>
-      <div class="past-event-info">
-        <div class="past-event-label">Health Apéro</div>
-        <div class="past-event-title">Apéros No. 1–13</div>
-        <div class="past-event-date">Jan 2025 – April 2026</div>
-      </div>
-      <div class="past-event-toggle" id="toggle-aperos">▾</div>
-    </div>
-    <div class="past-event-body" id="body-aperos">
-      <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Seit Januar 2025 haben die Health Apéros eine lebendige Community geschaffen – ein Format für Begegnung, Vernetzung und den offenen Austausch rund um Healthcare und Innovation.
-      </p>
-      <div style="margin-top:8px;">
-        <h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">Impressionen</h4>
-        <div class="gallery-grid" id="gallery-aperos">
-          <div class="gallery-loading">Bilder werden geladen…</div>
-        </div>
-        <p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">
-        Fotos: <a href="https://liviatamaska.com/" target="_blank">Livia Támaska Photography</a>
-      </p>
-      </div>
-    </div>
-  </div>
+  <div id="past-container"><div class="gallery-loading">Wird geladen…</div></div>
 
 </main>
 
@@ -451,6 +248,13 @@
 </footer>
 
 <script data-cfasync="false">
+
+  // ── KONFIGURATION ──
+  var SHEET_ID  = '1inAiEvDK3ORJUCkBkaTZVbK8PWJ7U8gIlV3hpEJoXMw';
+  var MAX_IMGS  = 30;  // max Bilder pro Galerie (auto-discovery)
+  var IMG_EXTS  = ['jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG'];
+
+  // ── INIT ──
   document.getElementById('year').textContent = new Date().getFullYear();
 
   function toggleMenu() {
@@ -461,184 +265,215 @@
     if (nav && h && !nav.contains(e.target) && !h.contains(e.target)) nav.classList.remove('open');
   });
 
-  // ── ACCORDION für vergangene Events ──
+  // ── HELPER: HTML & JS ESCAPE ──
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function escJs(s) {
+    return String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  }
+
+  // ── HELPER: YOUTUBE-ID AUS URL ──
+  function extractYTId(url) {
+    if (!url) return null;
+    var m = String(url).match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    return m ? m[1] : null;
+  }
+
+  // ── HELPER: GALERIEN-SPALTE PARSEN ──
+  // Format pro Eintrag (kommagetrennt): key:Titel:ordner:präfix
+  // Falls ordner/präfix fehlen, wird key als Fallback verwendet.
+  function parseGalerien(str) {
+    if (!str || !str.trim()) return [];
+    return str.split(',').map(function(part) {
+      part = part.trim();
+      var pieces = part.split(':');
+      var key = (pieces[0] || '').trim();
+      if (!key) return null;
+      return {
+        key:    key,
+        title:  (pieces[1] || '').trim(),
+        folder: (pieces[2] || key).trim(),
+        prefix: (pieces[3] || key).trim()
+      };
+    }).filter(Boolean);
+  }
+
+  // ── HELPER: FOTO-CREDITS PARSEN ──
+  // Namen und URLs sind jeweils pipe-getrennt (|)
+  function parseCredits(nameStr, urlStr) {
+    var names = String(nameStr || '').split('|').map(function(s) { return s.trim(); }).filter(Boolean);
+    var urls  = String(urlStr  || '').split('|').map(function(s) { return s.trim(); }).filter(Boolean);
+    return names.map(function(name, i) {
+      return { name: name, url: urls[i] || '' };
+    });
+  }
+
+  // ── CSV PARSER ──
+  function parseCSV(text) {
+    var rows = [], i = 0, len = text.length;
+    while (i < len) {
+      var row = [];
+      while (i < len && text[i] !== '\n') {
+        var field = '';
+        if (text[i] === '"') {
+          i++;
+          while (i < len) {
+            if (text[i] === '"') {
+              if (text[i + 1] === '"') { field += '"'; i += 2; }
+              else { i++; break; }
+            } else { field += text[i++]; }
+          }
+        } else {
+          while (i < len && text[i] !== ',' && text[i] !== '\n') { field += text[i++]; }
+        }
+        row.push(field);
+        if (i < len && text[i] === ',') i++;
+      }
+      if (i < len && text[i] === '\n') i++;
+      if (row.some(function(f) { return f.trim(); })) rows.push(row);
+    }
+    return rows;
+  }
+
+  function fetchCSV(sheetName, callback) {
+    var url = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID +
+      '/gviz/tq?tqx=out:csv&sheet=' + encodeURIComponent(sheetName);
+    fetch(url)
+      .then(function(r) { return r.text(); })
+      .then(function(t) { callback(null, parseCSV(t).slice(1)); }) // Headerzeile überspringen
+      .catch(function(e) { callback(e, []); });
+  }
+
+  // ── BILD-AUTODISCOVERY ──
+  // Probiert /images/{folder}/{prefix}-1.jpg ... /images/{folder}/{prefix}-30.ext
+  // Alle Slots parallel; unterstützt unpadded Nummerierung (1, 2 ... 10, 11 ...).
+  var GALLERY_CACHE = {};
+
+  function probeGallery(key, folder, prefix, ytId, callback) {
+    if (GALLERY_CACHE[key]) { callback(GALLERY_CACHE[key]); return; }
+    if (!folder || !prefix) {
+      var urls = ytId ? ['yt:' + ytId] : [];
+      GALLERY_CACHE[key] = urls;
+      callback(urls);
+      return;
+    }
+
+    var found = new Array(MAX_IMGS).fill(null);
+    var remaining = MAX_IMGS;
+
+    function finish() {
+      var urls = found.filter(Boolean);
+      if (ytId) urls.push('yt:' + ytId);
+      GALLERY_CACHE[key] = urls;
+      callback(urls);
+    }
+
+    for (var n = 1; n <= MAX_IMGS; n++) {
+      (function(num) {
+        var base = '/images/' + folder + '/' + prefix + '-' + num + '.';
+        function tryExt(ei) {
+          if (ei >= IMG_EXTS.length) {
+            if (--remaining === 0) finish();
+            return;
+          }
+          var img = new Image();
+          img.onload = function() {
+            found[num - 1] = base + IMG_EXTS[ei];
+            if (--remaining === 0) finish();
+          };
+          img.onerror = function() { tryExt(ei + 1); };
+          img.src = base + IMG_EXTS[ei];
+        }
+        tryExt(0);
+      })(n);
+    }
+  }
+
+  // ── GALERIE RENDERN ──
+  var CURRENT_GALLERY = {};
+
+  function renderGallery(key, urls, container) {
+    CURRENT_GALLERY[key] = urls;
+    container.innerHTML = '';
+    if (!urls.length) {
+      container.innerHTML = '<div class="gallery-loading">Noch keine Bilder vorhanden.</div>';
+      return;
+    }
+    urls.forEach(function(url, i) {
+      if (url.indexOf('yt:') === 0) {
+        var ytId = url.slice(3);
+        var thumb = document.createElement('div');
+        thumb.className = 'gallery-yt-thumb';
+        thumb.innerHTML =
+          '<img src="https://img.youtube.com/vi/' + ytId + '/mqdefault.jpg" alt="Video" />' +
+          '<div class="gallery-yt-play">▶</div>';
+        thumb.onclick = (function(k, idx) { return function() { openLightbox(k, idx); }; })(key, i);
+        container.appendChild(thumb);
+      } else {
+        var img = document.createElement('img');
+        img.src = url;
+        img.alt = 'Impression ' + (i + 1);
+        img.className = 'gallery-img';
+        img.onclick = (function(k, idx) { return function() { openLightbox(k, idx); }; })(key, i);
+        container.appendChild(img);
+      }
+    });
+  }
+
+  // ── AKKORDEON ──
   var openSections = {};
+
   function togglePast(id) {
-    var body = document.getElementById('body-' + id);
+    var body   = document.getElementById('body-' + id);
     var toggle = document.getElementById('toggle-' + id);
+    if (!body) return;
     openSections[id] = !openSections[id];
     body.classList.toggle('open', openSections[id]);
     toggle.classList.toggle('open', openSections[id]);
-    // Load all galleries inside this accordion section
-    if (openSections[id] && body) {
-      var galleryDivs = body.querySelectorAll('[id^="gallery-"]');
-      galleryDivs.forEach(function(div) {
-        var galleryId = div.id.replace('gallery-', '');
-        loadGallery(galleryId);
+
+    if (openSections[id]) {
+      body.querySelectorAll('[data-gallery-key]').forEach(function(div) {
+        if (div.dataset.loaded) return;
+        div.dataset.loaded = '1';
+        var gk     = div.dataset.galleryKey;
+        var ytId   = div.dataset.ytId || null;
+        if (div.dataset.ytOnly) {
+          // Nur YouTube, kein Bild-Probing nötig
+          renderGallery(gk, ['yt:' + ytId], div);
+        } else {
+          var folder = div.dataset.folder;
+          var prefix = div.dataset.prefix;
+          probeGallery(gk, folder, prefix, ytId, function(urls) {
+            renderGallery(gk, urls, div);
+          });
+        }
       });
     }
   }
 
-  var GALLERIES = {
-  gruendung: [
-    "/images/gruendungsversammlung/gruendungsversammlung-1.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-2.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-3.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-4.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-5.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-6.jpg",
-    "/images/gruendungsversammlung/gruendungsversammlung-7.jpg"
-  ],
-
-  aperos: [
-    "/images/aperos/aperos-1.jpg",
-    "/images/aperos/aperos-2.png",
-    "/images/aperos/aperos-3.png",
-    "/images/aperos/aperos-4.jpg",
-    "/images/aperos/aperos-5.jpeg",
-    "/images/aperos/aperos-6.jpeg",
-    "/images/aperos/aperos-7.jpeg",
-    "/images/aperos/aperos-8.jpeg",
-    "/images/aperos/aperos-9.jpg",
-    "/images/aperos/aperos-10.JPG",
-    "/images/aperos/aperos-11.JPG",
-    "/images/aperos/aperos-12.JPG",
-    "yt:7eBYEYe3iyI"
-  ],
-
-  plenum: [
-    "/images/strategieworkshop-1/plenum-1.jpg",
-    "/images/strategieworkshop-1/plenum-2.jpg",
-    "/images/strategieworkshop-1/plenum-3.jpg",
-    "/images/strategieworkshop-1/plenum-4.jpg",
-    "/images/strategieworkshop-1/plenum-5.jpg",
-    "/images/strategieworkshop-1/plenum-6.jpg",
-    "/images/strategieworkshop-1/plenum-7.jpg"   
-    
-  ],
-
-  netzwerk: [
-    "/images/strategieworkshop-1/netzwerk-1.jpg",
-    "/images/strategieworkshop-1/netzwerk-2.jpg",
-    "/images/strategieworkshop-1/netzwerk-3.jpg",
-    "/images/strategieworkshop-1/netzwerk-4.jpg",
-    "/images/strategieworkshop-1/netzwerk-5.jpg",
-    "/images/strategieworkshop-1/netzwerk-6.jpg",
-    "/images/strategieworkshop-1/netzwerk-7.jpg",
-    "/images/strategieworkshop-1/netzwerk-8.jpg",
-    "/images/strategieworkshop-1/netzwerk-9.jpg",
-    "/images/strategieworkshop-1/netzwerk-10.jpg",
-    "/images/strategieworkshop-1/netzwerk-11.jpg",
-    "/images/strategieworkshop-1/netzwerk-12.jpg"
-  ],
-
-  strategie2: [
-    "/images/strategieworkshop-2/strategie2-1.png",
-    "/images/strategieworkshop-2/strategie2-2.JPG",
-    "/images/strategieworkshop-2/strategie2-3.JPG",
-    "/images/strategieworkshop-2/strategie2-4.JPG",
-    "/images/strategieworkshop-2/strategie2-5.JPG",
-    "/images/strategieworkshop-2/strategie2-6.JPG",
-    "/images/strategieworkshop-2/strategie2-7.png",
-    "/images/strategieworkshop-2/strategie2-8.JPG",
-    "/images/strategieworkshop-2/strategie2-9.png",
-    "/images/strategieworkshop-2/strategie2-10.JPG",
-    "/images/strategieworkshop-2/strategie2-11.JPG",
-    "/images/strategieworkshop-2/strategie2-12.JPG",
-    "/images/strategieworkshop-2/strategie2-13.JPG",
-    "/images/strategieworkshop-2/strategie2-14.png",
-    "/images/strategieworkshop-2/strategie2-15.JPG",
-    "/images/strategieworkshop-2/strategie2-16.png",
-    "/images/strategieworkshop-2/strategie2-17.JPG",
-    "/images/strategieworkshop-2/strategie2-18.png",
-    "/images/strategieworkshop-2/strategie2-19.png",
-    "/images/strategieworkshop-2/strategie2-20.png"
-  ],
-
-  workshop: [
-    "/images/strategieworkshop-1/gruppen-1.jpg",
-    "/images/strategieworkshop-1/gruppen-2.jpg",
-    "/images/strategieworkshop-1/gruppen-3.jpg",
-    "/images/strategieworkshop-1/gruppen-4.jpg",
-    "/images/strategieworkshop-1/gruppen-5.jpg",
-    "/images/strategieworkshop-1/gruppen-6.jpg",
-    "/images/strategieworkshop-1/gruppen-7.jpg",
-    "/images/strategieworkshop-1/gruppen-8.jpg",
-    "/images/strategieworkshop-1/gruppen-9.jpg",
-    "/images/strategieworkshop-1/gruppen-10.jpg",
-    "/images/strategieworkshop-1/gruppen-11.jpg",
-    "/images/strategieworkshop-1/gruppen-12.jpg",
-    "/images/strategieworkshop-1/gruppen-13.jpg",
-    "/images/strategieworkshop-1/gruppen-14.jpg",
-    "/images/strategieworkshop-1/gruppen-15.jpg",
-    "/images/strategieworkshop-1/gruppen-16.jpg",
-    "/images/strategieworkshop-1/gruppen-17.jpg"
-  ]
-};
-
-var CURRENT_GALLERY = {};
-
-function loadGallery(id) {
-  var container = document.getElementById('gallery-' + id);
-  if (!container) return;
-
-  var urls = GALLERIES[id];
-
-  if (!urls || !urls.length) {
-    container.innerHTML = '<div class="gallery-loading">Noch keine Bilder vorhanden.</div>';
-    return;
-  }
-
-  renderGallery(id, urls);
-}
-
-function renderGallery(id, urls) {
-  var container = document.getElementById('gallery-' + id);
-  container.innerHTML = '';
-
-  // WICHTIG: speichern für Lightbox
-  CURRENT_GALLERY[id] = urls;
-
-
- urls.forEach(function(url, i) {
-    if (url.indexOf('yt:') === 0) {
-      var ytId = url.slice(3);
-      var thumb = document.createElement('div');
-      thumb.className = 'gallery-yt-thumb';
-      thumb.innerHTML = '<img src="https://img.youtube.com/vi/' + ytId + '/mqdefault.jpg" alt="Video" /><div class="gallery-yt-play">▶</div>';
-      thumb.onclick = function() { openLightbox(id, i); };
-      container.appendChild(thumb);
-    } else {
-      var img = document.createElement('img');
-      img.src = url;
-      img.alt = 'Impression ' + (i + 1);
-      img.className = 'gallery-img';
-      img.onclick = function() { openLightbox(id, i); };
-      container.appendChild(img);
-    }
-  });
-}
-
-
   // ── LIGHTBOX ──
-  var lbCurrent = 0;
-  var lbId = '';
+  var lbCurrent = 0, lbId = '';
 
   function openLightbox(id, idx) {
-    lbId = id;
-    lbCurrent = idx;
-    var item = CURRENT_GALLERY[id][idx];
+    lbId = id; lbCurrent = idx;
+    var item    = CURRENT_GALLERY[id][idx];
     var imgEl   = document.getElementById('lightbox-img');
     var ytWrap  = document.getElementById('lightboxYT');
     var ytFrame = document.getElementById('lightboxYTFrame');
     if (item.indexOf('yt:') === 0) {
-      imgEl.style.display = 'none';
-      ytFrame.src = 'https://www.youtube-nocookie.com/embed/' + item.slice(3) + '?rel=0&iv_load_policy=3&modestbranding=1&autoplay=1';
+      imgEl.style.display  = 'none';
+      ytFrame.src = 'https://www.youtube-nocookie.com/embed/' + item.slice(3) +
+        '?rel=0&iv_load_policy=3&modestbranding=1&autoplay=1';
       ytWrap.style.display = 'block';
     } else {
       ytWrap.style.display = 'none';
       ytFrame.src = '';
-      imgEl.src = item;
+      imgEl.src   = item;
       imgEl.style.display = 'block';
     }
     document.getElementById('lightbox').classList.add('open');
@@ -646,7 +481,8 @@ function renderGallery(id, urls) {
   }
 
   function closeLightbox(e) {
-    if (e && e.target !== document.getElementById('lightbox') && e.target !== document.querySelector('.lightbox-close')) return;
+    if (e && e.target !== document.getElementById('lightbox') &&
+        e.target !== document.querySelector('.lightbox-close')) return;
     document.getElementById('lightboxYTFrame').src = '';
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
@@ -660,10 +496,209 @@ function renderGallery(id, urls) {
   }
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') { document.getElementById('lightboxYTFrame').src = ''; closeLightbox({}); }
-    if (e.key === 'ArrowRight') lbNav(1);
-    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'Escape')      { document.getElementById('lightboxYTFrame').src = ''; closeLightbox({}); }
+    if (e.key === 'ArrowRight')  lbNav(1);
+    if (e.key === 'ArrowLeft')   lbNav(-1);
   });
+
+  // ── SVG-ICONS (für kommende Events ohne Embed) ──
+  function iconCal(stroke) {
+    return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="' + stroke + '" stroke-width="2">' +
+      '<rect x="3" y="4" width="18" height="18" rx="2"/>' +
+      '<line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>' +
+      '<line x1="3" y1="10" x2="21" y2="10"/></svg>';
+  }
+  function iconClock() {
+    return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+      '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+  }
+  function iconPin() {
+    return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+      '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>' +
+      '<circle cx="12" cy="9" r="2.5"/></svg>';
+  }
+
+  // ── KOMMENDE EVENTS RENDERN ──
+  // Spalten: Code | Nummer | Label | Titel | Datum | Uhrzeit | Ort | Beschreibung | Embed-URL | Kalender Link
+  function renderUpcoming(rows) {
+    var container = document.getElementById('upcoming-container');
+    if (!rows.length) {
+      container.innerHTML =
+        '<p style="color:var(--text-leicht);font-size:0.95rem;padding:8px 0;">' +
+        'Derzeit sind keine kommenden Events geplant.</p>';
+      return;
+    }
+
+    var html = '<div class="events-grid">';
+    rows.forEach(function(cols) {
+      var nummer   = (cols[1]  || '').trim();
+      var label    = (cols[2]  || '').trim();
+      var titel    = (cols[3]  || '').trim();
+      var datum    = (cols[4]  || '').trim();
+      var uhrzeit  = (cols[5]  || '').trim();
+      var ort      = (cols[6]  || '').trim();
+      var beschr   = (cols[7]  || '').trim();
+      var embedUrl = (cols[8]  || '').trim();
+      var kalLink  = (cols[9]  || '').trim();
+
+      html += '<div class="event-card">' +
+        '<div class="event-card-header">' +
+          '<div class="event-number">' + esc(nummer) + '</div>' +
+          '<div class="event-title-area">' +
+            '<div class="event-label">' + esc(label) + '</div>' +
+            '<h3>' + esc(titel) + '</h3>' +
+          '</div>' +
+        '</div>' +
+        '<div class="event-card-body">';
+
+      if (embedUrl) {
+        // Luma-Embed (oder anderer iFrame-Embed)
+        html += '<div class="event-embed">' +
+          '<iframe src="' + esc(embedUrl) + '" allow="fullscreen; payment" aria-hidden="false" tabindex="0"></iframe>' +
+          '</div>';
+      } else {
+        // Info-Card mit Datum / Uhrzeit / Ort / Beschreibung / Kalender-Link
+        html += '<div style="padding:24px 22px;display:flex;flex-direction:column;gap:16px;min-height:200px;">';
+        if (datum || uhrzeit || ort) {
+          html += '<div style="display:flex;flex-direction:column;gap:8px;">';
+          if (datum)   html += '<div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-leicht);">' + iconCal('currentColor') + esc(datum)   + '</div>';
+          if (uhrzeit) html += '<div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-leicht);">' + iconClock()               + esc(uhrzeit) + '</div>';
+          if (ort)     html += '<div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-leicht);">' + iconPin()                 + esc(ort)     + '</div>';
+          html += '</div>';
+        }
+        if (beschr) {
+          html += '<div style="background:var(--rot-hell);border-radius:6px;padding:10px 14px;font-size:0.82rem;color:var(--text-leicht);line-height:1.55;">' +
+            esc(beschr) + '</div>';
+        }
+        if (kalLink) {
+          html += '<a href="' + esc(kalLink) + '" target="_blank" ' +
+            'style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--rot);color:white;text-decoration:none;padding:11px 20px;border-radius:6px;font-size:0.88rem;font-weight:600;font-family:Inter,sans-serif;transition:background 0.2s;margin-top:auto;" ' +
+            'onmouseover="this.style.background=\'var(--rot-dunkel)\'" onmouseout="this.style.background=\'var(--rot)\'">' +
+            iconCal('white') + 'In Google Kalender eintragen</a>';
+        }
+        html += '</div>';
+      }
+
+      html += '</div></div>'; // event-card-body / event-card
+    });
+    html += '</div>'; // events-grid
+    container.innerHTML = html;
+  }
+
+  // ── VERGANGENE EVENTS RENDERN ──
+  // Spalten: Code | Nummer | Label | Titel | Datum | Beschreibung | PDF-URL | Galerien | Fotos-Credit | Foto-Credit-URL | YT-Link
+  function renderPast(rows) {
+    var container = document.getElementById('past-container');
+    if (!rows.length) { container.innerHTML = ''; return; }
+
+    var html = '';
+    rows.forEach(function(cols) {
+      var code        = (cols[0]  || '').trim();
+      var nummer      = (cols[1]  || '').trim();
+      var label       = (cols[2]  || '').trim();
+      var titel       = (cols[3]  || '').trim();
+      var datum       = (cols[4]  || '').trim();
+      var beschr      = (cols[5]  || '').trim();
+      var pdfUrl      = (cols[6]  || '').trim();
+      var galerienStr = (cols[7]  || '').trim();
+      var creditNames = (cols[8]  || '').trim();
+      var creditUrls  = (cols[9]  || '').trim();
+      var ytLink      = (cols[10] || '').trim();
+
+      var galerien = parseGalerien(galerienStr);
+      var credits  = parseCredits(creditNames, creditUrls);
+      var ytId     = extractYTId(ytLink);
+
+      // Nur YT, keine Galerie → Pseudo-Galerie mit YT-Thumbnail
+      if (ytId && !galerien.length) {
+        galerien = [{ key: code + '-yt', title: '', folder: '', prefix: '', ytOnly: true }];
+      }
+
+      // Akkordeon-Eintrag
+      html += '<div class="past-event" id="pe-' + esc(code) + '">';
+
+      // Header
+      html +=
+        '<div class="past-event-header" onclick="togglePast(\'' + escJs(code) + '\')">' +
+          '<div class="past-event-number">' + esc(nummer) + '</div>' +
+          '<div class="past-event-info">' +
+            '<div class="past-event-label">'  + esc(label)  + '</div>' +
+            '<div class="past-event-title">'  + esc(titel)  + '</div>' +
+            '<div class="past-event-date">'   + esc(datum)  + '</div>' +
+          '</div>' +
+          '<div class="past-event-toggle" id="toggle-' + esc(code) + '">▾</div>' +
+        '</div>';
+
+      // Body
+      html += '<div class="past-event-body" id="body-' + esc(code) + '">';
+
+      if (beschr) {
+        html += '<p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-bottom:20px;">' +
+          esc(beschr) + '</p>';
+      }
+
+      if (pdfUrl) {
+        html +=
+          '<div class="pdf-embed">' +
+            '<iframe src="' + esc(pdfUrl) + '" allow="autoplay" title="Dokument"></iframe>' +
+          '</div>' +
+          '<p class="pdf-note">Das Dokument ist nur zur Ansicht verfügbar.</p>';
+      }
+
+      // Galerien
+      galerien.forEach(function(g, gi) {
+        var isLast      = gi === galerien.length - 1;
+        var galleryYtId = (isLast && ytId && !g.ytOnly) ? ytId : null;
+
+        html += '<div style="margin-top:' + (gi === 0 ? '8' : '20') + 'px;">';
+        if (g.title) {
+          html += '<h4 style="font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-leicht);margin-bottom:12px;">' +
+            esc(g.title) + '</h4>';
+        }
+
+        if (g.ytOnly) {
+          // Nur YouTube-Video, kein Bild-Probing
+          html += '<div class="gallery-grid"' +
+            ' data-gallery-key="' + esc(g.key) + '"' +
+            ' data-folder=""' +
+            ' data-prefix=""' +
+            ' data-yt-id="' + esc(ytId) + '"' +
+            ' data-yt-only="1">' +
+            '<div class="gallery-loading">Wird geladen…</div></div>';
+        } else {
+          html += '<div class="gallery-grid"' +
+            ' data-gallery-key="' + esc(g.key) + '"' +
+            ' data-folder="'      + esc(g.folder) + '"' +
+            ' data-prefix="'      + esc(g.prefix) + '"' +
+            (galleryYtId ? ' data-yt-id="' + esc(galleryYtId) + '"' : '') +
+            '><div class="gallery-loading">Bilder werden geladen…</div></div>';
+        }
+
+        html += '</div>'; // margin-top wrapper
+      });
+
+      // Foto-Credits
+      if (credits.length) {
+        var creditHtml = credits.map(function(c) {
+          return c.url
+            ? '<a href="' + esc(c.url) + '" target="_blank">' + esc(c.name) + '</a>'
+            : esc(c.name);
+        }).join(' &amp; ');
+        html += '<p style="font-size:0.95rem;color:var(--text-leicht);line-height:1.7;margin-top:16px;margin-bottom:20px;">' +
+          'Fotos: ' + creditHtml + '</p>';
+      }
+
+      html += '</div>'; // past-event-body
+      html += '</div>'; // past-event
+    });
+
+    container.innerHTML = html;
+  }
+
+  // ── DATEN LADEN ──
+  fetchCSV('Events-upcoming', function(err, rows) { renderUpcoming(rows); });
+  fetchCSV('Events-past',     function(err, rows) { renderPast(rows); });
+
 </script>
 </body>
 </html>
