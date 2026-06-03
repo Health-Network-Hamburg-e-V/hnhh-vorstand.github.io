@@ -1,128 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="680" height="680" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>HNHH Circle-Struktur</title>
   <defs><clipPath id="logo_clip"><circle cx="340" cy="340" r="36"/></clipPath></defs>
   <rect width="680" height="680" fill="#ffffff"/>
-  <!-- Sub-circle connectors -->
-  <line x1="318.87" y1="115.27" x2="316.06" y2="109.97" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="320.27" y1="114.55" x2="317.64" y2="109.16" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
   <line x1="340.00" y1="110.00" x2="340.00" y2="104.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="361.13" y1="115.27" x2="363.94" y2="109.97" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="443.73" y1="139.52" x2="444.22" y2="133.54" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="464.35" y1="146.51" x2="467.59" y2="141.46" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="479.27" y1="162.36" x2="484.51" y2="159.43" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="535.65" y1="227.43" x2="539.30" y2="222.66" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="549.22" y1="244.45" x2="554.67" y2="241.96" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="553.20" y1="265.86" x2="559.19" y2="266.22" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="565.45" y1="351.07" x2="571.10" y2="349.04" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="567.66" y1="372.73" x2="573.60" y2="373.59" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="559.44" y1="392.89" x2="564.28" y2="396.44" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="523.68" y1="471.20" x2="529.52" y2="472.54" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="513.82" y1="490.62" x2="518.36" y2="494.55" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="496.01" y1="503.13" x2="498.17" y2="508.73" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="423.58" y1="549.68" x2="427.78" y2="553.97" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="404.80" y1="560.68" x2="406.49" y2="566.44" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="383.04" y1="561.58" x2="381.83" y2="567.46" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="296.96" y1="561.58" x2="298.17" y2="567.46" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="275.20" y1="560.68" x2="273.51" y2="566.44" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="256.42" y1="549.68" x2="252.22" y2="553.97" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="183.99" y1="503.13" x2="181.83" y2="508.73" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="166.18" y1="490.62" x2="161.64" y2="494.55" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="156.32" y1="471.20" x2="150.48" y2="472.54" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="120.56" y1="392.89" x2="115.72" y2="396.44" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="112.34" y1="372.73" x2="106.40" y2="373.59" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="114.55" y1="351.07" x2="108.90" y2="349.04" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="126.80" y1="265.86" x2="120.81" y2="266.22" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="130.78" y1="244.45" x2="125.33" y2="241.96" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="144.35" y1="227.43" x2="140.70" y2="222.66" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="200.73" y1="162.36" x2="195.49" y2="159.43" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="215.65" y1="146.51" x2="212.41" y2="141.46" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="236.27" y1="139.52" x2="235.78" y2="133.54" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
-  <!-- Center connectors -->
-  <line x1="340.00" y1="262.00" x2="340.00" y2="201.00" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="382.17" y1="274.38" x2="415.15" y2="223.07" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="410.95" y1="307.60" x2="466.44" y2="282.26" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="417.21" y1="351.10" x2="477.59" y2="359.78" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="398.95" y1="391.08" x2="445.05" y2="431.03" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="361.98" y1="414.84" x2="379.16" y2="473.37" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="318.02" y1="414.84" x2="300.84" y2="473.37" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="281.05" y1="391.08" x2="234.95" y2="431.03" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="262.79" y1="351.10" x2="202.41" y2="359.78" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="269.05" y1="307.60" x2="213.56" y2="282.26" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <line x1="297.83" y1="274.38" x2="264.85" y2="223.07" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4"/>
-  <!-- Sub-circles -->
-  <circle cx="310.89" cy="100.26" r="10" fill="#E8607A"/>
+  <line x1="359.73" y1="114.55" x2="362.36" y2="109.16" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="435.64" y1="134.89" x2="436.06" y2="128.91" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="455.00" y1="140.81" x2="458.00" y2="135.62" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="469.81" y1="154.62" x2="474.78" y2="151.27" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="525.38" y1="210.19" x2="528.73" y2="205.22" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="539.19" y1="225.00" x2="544.38" y2="222.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="545.11" y1="244.36" x2="551.09" y2="243.94" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="565.45" y1="320.27" x2="570.84" y2="317.64" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="570.00" y1="340.00" x2="576.00" y2="340.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="565.45" y1="359.73" x2="570.84" y2="362.36" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="545.11" y1="435.64" x2="551.09" y2="436.06" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="539.19" y1="455.00" x2="544.38" y2="458.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="525.38" y1="469.81" x2="528.73" y2="474.78" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="469.81" y1="525.38" x2="474.78" y2="528.73" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="455.00" y1="539.19" x2="458.00" y2="544.38" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="435.64" y1="545.11" x2="436.06" y2="551.09" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="359.73" y1="565.45" x2="362.36" y2="570.84" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="340.00" y1="570.00" x2="340.00" y2="576.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="320.27" y1="565.45" x2="317.64" y2="570.84" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="244.36" y1="545.11" x2="243.94" y2="551.09" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="225.00" y1="539.19" x2="222.00" y2="544.38" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="210.19" y1="525.38" x2="205.22" y2="528.73" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="154.62" y1="469.81" x2="151.27" y2="474.78" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="140.81" y1="455.00" x2="135.62" y2="458.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="134.89" y1="435.64" x2="128.91" y2="436.06" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="114.55" y1="359.73" x2="109.16" y2="362.36" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="110.00" y1="340.00" x2="104.00" y2="340.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="114.55" y1="320.27" x2="109.16" y2="317.64" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="134.89" y1="244.36" x2="128.91" y2="243.94" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="140.81" y1="225.00" x2="135.62" y2="222.00" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="154.62" y1="210.19" x2="151.27" y2="205.22" stroke="#C8102E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="340.00" y1="262.00" x2="340.00" y2="201.00" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="379.00" y1="272.45" x2="409.50" y2="219.62" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="407.55" y1="301.00" x2="460.38" y2="270.50" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="418.00" y1="340.00" x2="479.00" y2="340.00" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="407.55" y1="379.00" x2="460.38" y2="409.50" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="379.00" y1="407.55" x2="409.50" y2="460.38" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="340.00" y1="418.00" x2="340.00" y2="479.00" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="301.00" y1="407.55" x2="270.50" y2="460.38" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="272.45" y1="379.00" x2="219.62" y2="409.50" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="262.00" y1="340.00" x2="201.00" y2="340.00" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="272.45" y1="301.00" x2="219.62" y2="270.50" stroke="#C8102E" stroke-width="1.2" stroke-opacity="0.4" />
+  <line x1="301.00" y1="272.45" x2="270.50" y2="219.62" stroke="#D4A0B0" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="5 3"/>
+  <circle cx="312.82" cy="99.27" r="10" fill="#E8607A"/>
   <circle cx="340.00" cy="93.00" r="10" fill="#E8607A"/>
-  <circle cx="369.11" cy="100.26" r="10" fill="#E8607A"/>
-  <circle cx="445.13" cy="122.58" r="10" fill="#E8607A"/>
-  <circle cx="473.54" cy="132.21" r="10" fill="#E8607A"/>
-  <circle cx="494.10" cy="154.05" r="10" fill="#E8607A"/>
-  <circle cx="545.99" cy="213.93" r="10" fill="#E8607A"/>
-  <circle cx="564.68" cy="237.39" r="10" fill="#E8607A"/>
-  <circle cx="570.17" cy="266.88" r="10" fill="#E8607A"/>
-  <circle cx="581.44" cy="345.31" r="10" fill="#E8607A"/>
-  <circle cx="584.49" cy="375.15" r="10" fill="#E8607A"/>
-  <circle cx="573.16" cy="402.93" r="10" fill="#E8607A"/>
-  <circle cx="540.25" cy="475.00" r="10" fill="#E8607A"/>
-  <circle cx="526.67" cy="501.75" r="10" fill="#E8607A"/>
-  <circle cx="502.12" cy="519.00" r="10" fill="#E8607A"/>
-  <circle cx="435.47" cy="561.83" r="10" fill="#E8607A"/>
-  <circle cx="409.59" cy="576.99" r="10" fill="#E8607A"/>
-  <circle cx="379.62" cy="578.23" r="10" fill="#E8607A"/>
-  <circle cx="300.38" cy="578.23" r="10" fill="#E8607A"/>
-  <circle cx="270.41" cy="576.99" r="10" fill="#E8607A"/>
-  <circle cx="244.53" cy="561.83" r="10" fill="#E8607A"/>
-  <circle cx="177.88" cy="519.00" r="10" fill="#E8607A"/>
-  <circle cx="153.33" cy="501.75" r="10" fill="#E8607A"/>
-  <circle cx="139.75" cy="475.00" r="10" fill="#E8607A"/>
-  <circle cx="106.84" cy="402.93" r="10" fill="#E8607A"/>
-  <circle cx="95.51" cy="375.15" r="10" fill="#E8607A"/>
-  <circle cx="98.56" cy="345.31" r="10" fill="#E8607A"/>
-  <circle cx="109.83" cy="266.88" r="10" fill="#E8607A"/>
-  <circle cx="115.32" cy="237.39" r="10" fill="#E8607A"/>
-  <circle cx="134.01" cy="213.93" r="10" fill="#E8607A"/>
-  <circle cx="185.90" cy="154.05" r="10" fill="#E8607A"/>
-  <circle cx="206.46" cy="132.21" r="10" fill="#E8607A"/>
-  <circle cx="234.87" cy="122.58" r="10" fill="#E8607A"/>
-  <!-- Main circles -->
+  <circle cx="367.18" cy="99.27" r="10" fill="#E8607A"/>
+  <circle cx="436.82" cy="117.94" r="10" fill="#E8607A"/>
+  <circle cx="463.50" cy="126.09" r="10" fill="#E8607A"/>
+  <circle cx="483.90" cy="145.12" r="10" fill="#E8607A"/>
+  <circle cx="534.88" cy="196.10" r="10" fill="#E8607A"/>
+  <circle cx="553.91" cy="216.50" r="10" fill="#E8607A"/>
+  <circle cx="562.06" cy="243.18" r="10" fill="#E8607A"/>
+  <circle cx="580.73" cy="312.82" r="10" fill="#E8607A"/>
+  <circle cx="587.00" cy="340.00" r="10" fill="#E8607A"/>
+  <circle cx="580.73" cy="367.18" r="10" fill="#E8607A"/>
+  <circle cx="562.06" cy="436.82" r="10" fill="#E8607A"/>
+  <circle cx="553.91" cy="463.50" r="10" fill="#E8607A"/>
+  <circle cx="534.88" cy="483.90" r="10" fill="#E8607A"/>
+  <circle cx="483.90" cy="534.88" r="10" fill="#E8607A"/>
+  <circle cx="463.50" cy="553.91" r="10" fill="#E8607A"/>
+  <circle cx="436.82" cy="562.06" r="10" fill="#E8607A"/>
+  <circle cx="367.18" cy="580.73" r="10" fill="#E8607A"/>
+  <circle cx="340.00" cy="587.00" r="10" fill="#E8607A"/>
+  <circle cx="312.82" cy="580.73" r="10" fill="#E8607A"/>
+  <circle cx="243.18" cy="562.06" r="10" fill="#E8607A"/>
+  <circle cx="216.50" cy="553.91" r="10" fill="#E8607A"/>
+  <circle cx="196.10" cy="534.88" r="10" fill="#E8607A"/>
+  <circle cx="145.12" cy="483.90" r="10" fill="#E8607A"/>
+  <circle cx="126.09" cy="463.50" r="10" fill="#E8607A"/>
+  <circle cx="117.94" cy="436.82" r="10" fill="#E8607A"/>
+  <circle cx="99.27" cy="367.18" r="10" fill="#E8607A"/>
+  <circle cx="93.00" cy="340.00" r="10" fill="#E8607A"/>
+  <circle cx="99.27" cy="312.82" r="10" fill="#E8607A"/>
+  <circle cx="117.94" cy="243.18" r="10" fill="#E8607A"/>
+  <circle cx="126.09" cy="216.50" r="10" fill="#E8607A"/>
+  <circle cx="145.12" cy="196.10" r="10" fill="#E8607A"/>
   <circle cx="340.00" cy="155.00" r="44" fill="#C8102E"/>
-  <circle cx="440.02" cy="184.37" r="44" fill="#C8102E"/>
-  <circle cx="508.28" cy="263.15" r="44" fill="#C8102E"/>
-  <circle cx="523.12" cy="366.33" r="44" fill="#C8102E"/>
-  <circle cx="479.81" cy="461.15" r="44" fill="#C8102E"/>
-  <circle cx="392.12" cy="517.51" r="44" fill="#C8102E"/>
-  <circle cx="287.88" cy="517.51" r="44" fill="#C8102E"/>
-  <circle cx="200.19" cy="461.15" r="44" fill="#C8102E"/>
-  <circle cx="156.88" cy="366.33" r="44" fill="#C8102E"/>
-  <circle cx="171.72" cy="263.15" r="44" fill="#C8102E"/>
-  <circle cx="239.98" cy="184.37" r="44" fill="#C8102E"/>
-  <!-- Main circle labels -->
-  <text x="340.00" y="148.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Technology</text>
-  <text x="340.00" y="161.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">& AI</text>
-  <text x="440.02" y="177.87" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Science &</text>
-  <text x="440.02" y="190.87" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Evidence</text>
-  <text x="508.28" y="256.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Health Policy &</text>
-  <text x="508.28" y="269.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Public Health</text>
-  <text x="523.12" y="359.83" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Legal &</text>
-  <text x="523.12" y="372.83" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Regulatory</text>
-  <text x="479.81" y="454.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Startups &</text>
-  <text x="479.81" y="467.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">New Ventures</text>
-  <text x="392.12" y="511.01" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Funding &</text>
-  <text x="392.12" y="524.01" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Financing</text>
-  <text x="287.88" y="511.01" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Partnerships &</text>
-  <text x="287.88" y="524.01" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Member Activation</text>
-  <text x="200.19" y="454.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Apéros &</text>
-  <text x="200.19" y="467.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Events</text>
-  <text x="156.88" y="359.83" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Marketing &</text>
-  <text x="156.88" y="372.83" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Communication</text>
-  <text x="171.72" y="256.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Healthcare Prof.</text>
-  <text x="171.72" y="269.65" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">& Patients</text>
-  <text x="239.98" y="177.87" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">International</text>
-  <text x="239.98" y="190.87" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">& Expats</text>
-  <!-- Center circle -->
+  <circle cx="432.50" cy="179.79" r="44" fill="#C8102E"/>
+  <circle cx="500.21" cy="247.50" r="44" fill="#C8102E"/>
+  <circle cx="525.00" cy="340.00" r="44" fill="#C8102E"/>
+  <circle cx="500.21" cy="432.50" r="44" fill="#C8102E"/>
+  <circle cx="432.50" cy="500.21" r="44" fill="#C8102E"/>
+  <circle cx="340.00" cy="525.00" r="44" fill="#C8102E"/>
+  <circle cx="247.50" cy="500.21" r="44" fill="#C8102E"/>
+  <circle cx="179.79" cy="432.50" r="44" fill="#C8102E"/>
+  <circle cx="155.00" cy="340.00" r="44" fill="#C8102E"/>
+  <circle cx="179.79" cy="247.50" r="44" fill="#C8102E"/>
+  <circle cx="247.50" cy="179.79" r="44" fill="#faf0f2" stroke="#D4A0B0" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="340.00" y="148.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Technology</text>
+  <text x="340.00" y="161.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">&amp; AI</text>
+  <text x="432.50" y="173.29" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Science &amp;</text>
+  <text x="432.50" y="186.29" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Evidence</text>
+  <text x="500.21" y="241.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Health Policy &amp;</text>
+  <text x="500.21" y="254.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Public Health</text>
+  <text x="525.00" y="333.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Legal &amp;</text>
+  <text x="525.00" y="346.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Regulatory</text>
+  <text x="500.21" y="426.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Startups &amp;</text>
+  <text x="500.21" y="439.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">New Ventures</text>
+  <text x="432.50" y="493.71" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Funding &amp;</text>
+  <text x="432.50" y="506.71" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Financing</text>
+  <text x="340.00" y="518.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Partnerships &amp;</text>
+  <text x="340.00" y="531.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Member Activation</text>
+  <text x="247.50" y="493.71" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Apéros &amp;</text>
+  <text x="247.50" y="506.71" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Events</text>
+  <text x="179.79" y="426.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Marketing &amp;</text>
+  <text x="179.79" y="439.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Communication</text>
+  <text x="155.00" y="333.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">Healthcare Prof.</text>
+  <text x="155.00" y="346.50" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">&amp; Patients</text>
+  <text x="179.79" y="241.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">International</text>
+  <text x="179.79" y="254.00" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">&amp; Expats</text>
+  <text x="247.50" y="173.29" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#C8607A">zukünftiger</text>
+  <text x="247.50" y="186.29" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="bold" fill="#C8607A">Circle</text>
   <circle cx="340" cy="340" r="76" fill="#7A0818"/>
   <circle cx="340" cy="340" r="72" fill="#8B0C22"/>
   <circle cx="340" cy="340" r="69" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
   <circle cx="340" cy="340" r="36" fill="#FFFFFF"/>
   <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iRWJlbmVfMiIgZGF0YS1uYW1lPSJFYmVuZSAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzkuMzggMTc4LjA4Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjMWQxZDFiOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICNkYTE1MWM7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJFYmVuZV8xIiBkYXRhLW5hbWU9IkViZW5lIDEiPgogICAgPGc+CiAgICAgIDxnPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTYuNzMgNjkuODUgNC40MiA2OS44NSA0LjQyIDYwLjAzIDAgNjAuMDMgMCA4My44MyA0LjQyIDgzLjgzIDQuNDIgNzMuNjMgMTYuNzMgNzMuNjMgMTYuNzMgODMuODMgMjEuMTEgODMuODMgMjEuMTEgNjAuMDMgMTYuNzMgNjAuMDMgMTYuNzMgNjkuODUiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjU0LjIzIDgwLjA5IDQwLjggODAuMDkgNDAuOCA3My41NiA1Mi4yOSA3My41NiA1Mi4yOSA2OS45MiA0MC44IDY5LjkyIDQwLjggNjMuNzcgNTMuNzUgNjMuNzcgNTMuNzUgNjAuMDMgMzYuMzggNjAuMDMgMzYuMzggODMuODMgNTQuMjMgODMuODMgNTQuMjMgODAuMDkiLz4KICAgICAgICA8cGF0aCBkPSJNNzEuNTIsNzguMzJoMTEuOWwyLjM2LDUuNTFoNC42NmwtMTAuNzQtMjMuOGgtNC4zNWwtMTAuNzEsMjMuOGg0LjUybDIuMzctNS41MVpNNzcuNDgsNjQuNDNsNC40NiwxMC40MmgtOC45M2w0LjQ3LTEwLjQyWiIvPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTA2LjczIDYwLjAzIDEwMi4zMSA2MC4wMyAxMDIuMzEgODMuODMgMTE5LjE3IDgzLjgzIDExOS4xNyA4MC4wOSAxMDYuNzMgODAuMDkgMTA2LjczIDYwLjAzIi8+CiAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIxMzMuNzkgODMuODMgMTM4LjIxIDgzLjgzIDEzOC4yMSA2My43NyAxNDYuMSA2My43NyAxNDYuMSA2MC4wMyAxMjUuOSA2MC4wMyAxMjUuOSA2My43NyAxMzMuNzkgNjMuNzcgMTMzLjc5IDgzLjgzIi8+CiAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIxNzUgNjAuMDMgMTc1IDY5Ljg1IDE2Mi42OSA2OS44NSAxNjIuNjkgNjAuMDMgMTU4LjI3IDYwLjAzIDE1OC4yNyA4My44MyAxNjIuNjkgODMuODMgMTYyLjY5IDczLjYzIDE3NSA3My42MyAxNzUgODMuODMgMTc5LjM4IDgzLjgzIDE3OS4zOCA2MC4wMyAxNzUgNjAuMDMiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjM1Ljg1IDEwOS44MyAzNS44NSA5NS44MyAzMy4yOSA5NS44MyAzMy4yOSAxMDUuMzIgMjUuNTcgOTUuODMgMjMuNDMgOTUuODMgMjMuNDMgMTA5LjgzIDI2LjAxIDEwOS44MyAyNi4wMSAxMDAuMzMgMzMuNzEgMTA5LjgzIDM1Ljg1IDEwOS44MyIvPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iNTQuNTMgMTA3LjYzIDQ2LjYzIDEwNy42MyA0Ni42MyAxMDMuNzkgNTMuMzkgMTAzLjc5IDUzLjM5IDEwMS42NSA0Ni42MyAxMDEuNjUgNDYuNjMgOTguMDMgNTQuMjUgOTguMDMgNTQuMjUgOTUuODMgNDQuMDMgOTUuODMgNDQuMDMgMTA5LjgzIDU0LjUzIDEwOS44MyA1NC41MyAxMDcuNjMiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjYwLjAzIDk4LjAzIDY0LjY3IDk4LjAzIDY0LjY3IDEwOS44MyA2Ny4yNyAxMDkuODMgNjcuMjcgOTguMDMgNzEuOTEgOTguMDMgNzEuOTEgOTUuODMgNjAuMDMgOTUuODMgNjAuMDMgOTguMDMiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9Ijk2LjA1IDk1LjgzIDkyLjQ2IDEwNi41MyA4OC45MyA5NS44MyA4Ni41MyA5NS44MyA4Mi45MSAxMDYuNDggNzkuNDMgOTUuODMgNzYuNzMgOTUuODMgODEuMzcgMTA5LjgzIDg0LjE3IDEwOS44MyA4Ny42NyA5OS40OCA5MS4xMyAxMDkuODMgOTMuODkgMTA5LjgzIDk4LjUzIDk1LjgzIDk2LjA1IDk1LjgzIi8+CiAgICAgICAgPHBhdGggZD0iTTExNi44Niw5Ny42NmMtLjY3LS42NS0xLjQ3LTEuMTUtMi4zOS0xLjUtLjkyLS4zNS0xLjkyLS41My0zLS41M3MtMi4xLjE4LTMuMDIuNTRjLS45Mi4zNi0xLjcyLjg2LTIuNCwxLjUxLS42OC42NS0xLjIxLDEuNDEtMS41OCwyLjI4LS4zNy44Ny0uNTYsMS44My0uNTYsMi44N3MuMTksMS45OC41NiwyLjg1Yy4zNy44Ny45LDEuNjQsMS41OCwyLjI5LjY4LjY1LDEuNDgsMS4xNiwyLjQxLDEuNTIuOTMuMzYsMS45My41NCwzLjAxLjU0czIuMDgtLjE4LDMtLjUzYy45Mi0uMzUsMS43Mi0uODYsMi4zOS0xLjUxLjY3LS42NSwxLjItMS40MiwxLjU3LTIuMjkuMzctLjg3LjU2LTEuODMuNTYtMi44N3MtLjE5LTItLjU2LTIuODhjLS4zNy0uODgtLjktMS42NC0xLjU3LTIuMjlaTTExNiwxMDQuODFjLS4yNS42LS41OSwxLjEyLTEuMDMsMS41Ni0uNDQuNDQtLjk2Ljc4LTEuNTUsMS4wMi0uNTkuMjQtMS4yNC4zNi0xLjk1LjM2cy0xLjM2LS4xMi0xLjk3LS4zNmMtLjYxLS4yNC0xLjEzLS41OC0xLjU3LTEuMDMtLjQ0LS40NS0uNzktLjk3LTEuMDQtMS41Ny0uMjUtLjYtLjM4LTEuMjUtLjM4LTEuOTZzLjEzLTEuMzguMzgtMS45N2MuMjUtLjU5LjYtMS4xMSwxLjA0LTEuNTYuNDQtLjQ1Ljk2LS43OSwxLjU3LTEuMDMuNjEtLjI0LDEuMjYtLjM2LDEuOTctLjM2czEuMzYuMTIsMS45NS4zNmMuNTkuMjQsMS4xMS41OCwxLjU2LDEuMDIuNDUuNDQuNzkuOTYsMS4wMywxLjU2LjI0LjYuMzYsMS4yNi4zNiwxLjk4cy0uMTIsMS4zOC0uMzcsMS45OFoiLz4KICAgICAgICA8cGF0aCBkPSJNMTM3LjE1LDEwMy40NWMuNDgtLjczLjcyLTEuNjEuNzItMi42NCwwLTEuNTUtLjUzLTIuNzYtMS41OS0zLjY1LTEuMDYtLjg5LTIuNTItMS4zMy00LjM5LTEuMzNoLTUuNzR2MTRoMi42di00LjA4aDMuMTZjLjE5LDAsLjM2LS4wMS41NC0uMDJsMi44Niw0LjFoMi44bC0zLjIyLTQuNmMuMDctLjAzLjE1LS4wNS4yMS0uMDguODktLjQsMS41Ny0uOTcsMi4wNS0xLjdaTTEzNC4zOCw5OC43NmMuNTguNDkuODcsMS4xNy44NywyLjA1cy0uMjksMS41Ny0uODcsMi4wNi0xLjQ0Ljc0LTIuNTkuNzRoLTMuMDR2LTUuNThoMy4wNGMxLjE1LDAsMi4wMS4yNCwyLjU5LjczWiIvPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTU3LjYxIDk1LjgzIDE1NC42NyA5NS44MyAxNDcuNzcgMTAzLjAxIDE0Ny43NyA5NS44MyAxNDUuMTcgOTUuODMgMTQ1LjE3IDEwOS44MyAxNDcuNzcgMTA5LjgzIDE0Ny43NyAxMDYuMjIgMTQ5Ljk5IDEwMy45NyAxNTQuOTMgMTA5LjgzIDE1Ny45OSAxMDkuODMgMTUxLjcyIDEwMi4wOCAxNTcuNjEgOTUuODMiLz4KICAgICAgICA8cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iNDEuMDkgMTI0LjI0IDM1LjQ3IDEyNC4yNCAzNS40NyAxMjAuMDMgMzQuMDcgMTIwLjAzIDM0LjA3IDEyOS44MyAzNS40NyAxMjkuODMgMzUuNDcgMTI1LjQ2IDQxLjA5IDEyNS40NiA0MS4wOSAxMjkuODMgNDIuNDkgMTI5LjgzIDQyLjQ5IDEyMC4wMyA0MS4wOSAxMjAuMDMgNDEuMDkgMTI0LjI0Ii8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNDkuNTEsMTIwLjAzbC00LjQ0LDkuOGgxLjQ0bDEuMDgtMi40NWg1LjIxbDEuMDgsMi40NWgxLjQ3bC00LjQ1LTkuOGgtMS4zOVpNNDguMDgsMTI2LjI2bDIuMTEtNC44MSwyLjExLDQuODFoLTQuMjNaIi8+CiAgICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjY3LjE5IDEyMC4wMyA2My4xNiAxMjYuOTEgNTkuMDcgMTIwLjAzIDU3LjkyIDEyMC4wMyA1Ny45MiAxMjkuODMgNTkuMjcgMTI5LjgzIDU5LjI3IDEyMi43MiA2Mi44MSAxMjguNjQgNjMuNDUgMTI4LjY0IDY2Ljk5IDEyMi42OCA2Ny4wMSAxMjkuODMgNjguMzUgMTI5LjgzIDY4LjM0IDEyMC4wMyA2Ny4xOSAxMjAuMDMiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik03OS40NCwxMjQuOTFjLS4xNS0uMDctLjMxLS4xMS0uNDgtLjE1LjAxLDAsLjAzLDAsLjA0LS4wMi40LS4yLjcyLS40OC45Ni0uODQuMjQtLjM2LjM2LS44MS4zNi0xLjM0LDAtLjc4LS4zLTEuNC0uOTEtMS44NS0uNjEtLjQ1LTEuNDctLjY4LTIuNi0uNjhoLTQuNHY5LjhoNC42OGMxLjI0LDAsMi4xOC0uMjMsMi44MS0uNjlzLjk1LTEuMTEuOTUtMS45NWMwLS41Ni0uMTMtMS4wMy0uMzgtMS40MS0uMjUtLjM4LS41OS0uNjYtMS4wMi0uODZaTTc2LjY4LDEyMS4xNmMuNzEsMCwxLjI2LjEzLDEuNjUuMzkuMzkuMjYuNTkuNjUuNTksMS4xOHMtLjIuOTItLjU5LDEuMThjLS4zOS4yNi0uOTQuMzktMS42NS4zOWgtMi44N3YtMy4xNGgyLjg3Wk03OC44MSwxMjguM2MtLjQxLjI2LTEsLjM5LTEuNzguMzloLTMuMjJ2LTMuMjZoMy4yMmMuNzcsMCwxLjM3LjEzLDEuNzguMzkuNDEuMjYuNjIuNjguNjIsMS4yNXMtLjIxLjk3LS42MiwxLjIzWiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTkwLjk4LDEyNS41NGMwLDEuMDktLjI0LDEuODktLjcyLDIuMzlzLTEuMTYuNzYtMi4wNS43Ni0xLjU2LS4yNS0yLjA0LS43Ni0uNzItMS4zLS43Mi0yLjM5di01LjUyaC0xLjR2NS41N2MwLDEuNDIuMzcsMi41LDEuMTEsMy4yMy43NC43NCwxLjc1LDEuMTEsMy4wNCwxLjExczIuMzEtLjM3LDMuMDQtMS4xMWMuNzMtLjc0LDEuMS0xLjgxLDEuMS0zLjIzdi01LjU3aC0xLjM2djUuNTJaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTAyLjM0LDEyNi40NGMuNjEtLjI3LDEuMDctLjY2LDEuNC0xLjE3LjMzLS41MS40OS0xLjEyLjQ5LTEuODMsMC0xLjA3LS4zNi0xLjkxLTEuMDktMi41MS0uNzMtLjYtMS43My0uOS0zLS45aC0zLjgydjkuOGgxLjR2LTIuOThoMi40MmMuMjIsMCwuNC0uMDMuNi0uMDVsMi4xMywzLjAzaDEuNTNsLTIuMzQtMy4zYy4wOS0uMDMuMi0uMDUuMjgtLjA5Wk0xMDAuMSwxMjUuNjVoLTIuMzh2LTQuNDFoMi4zOGMuOSwwLDEuNTguMTksMi4wNC41N3MuNjkuOTIuNjksMS42Mi0uMjMsMS4yNC0uNjksMS42My0xLjE0LjU4LTIuMDQuNThaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTA5LjMyLDEyMi4yMmMuMzUtLjM0Ljc3LS42LDEuMjUtLjc4LjQ4LS4xOSwxLS4yOCwxLjU2LS4yOHMxLjA2LjA5LDEuNTMuMjdjLjQ3LjE4LjkxLjQ3LDEuMzEuODZsLjg3LS44N2MtLjQ1LS41LS45OS0uODgtMS42NC0xLjEzLS42NC0uMjUtMS4zNS0uMzgtMi4xMy0uMzhzLTEuNDYuMTItMi4xLjM3Yy0uNjMuMjUtMS4xOS42LTEuNjYsMS4wNS0uNDcuNDUtLjg0Ljk4LTEuMSwxLjU5LS4yNi42MS0uMzksMS4yNy0uMzksMnMuMTMsMS40LjM5LDJjLjI2LjYxLjYyLDEuMTQsMS4wOSwxLjU5LjQ3LjQ1LDEuMDIuOCwxLjY1LDEuMDUuNjMuMjUsMS4zMy4zNywyLjA5LjM3LjY5LDAsMS4zNi0uMSwyLjAxLS4zMS42NS0uMjEsMS4yMS0uNTIsMS43LS45M3YtMy44MmgtMS4zNHYzLjE4Yy0uMjUuMTctLjUxLjMxLS43OS40LS40OC4xNi0uOTguMjUtMS41LjI1LS41NiwwLTEuMDgtLjA5LTEuNTUtLjI4LS40OC0uMTktLjg5LS40NS0xLjI0LS43OS0uMzUtLjM0LS42Mi0uNzQtLjgxLTEuMi0uMTktLjQ2LS4yOS0uOTYtLjI5LTEuNDlzLjEtMS4wNC4yOS0xLjVjLjE5LS40Ni40Ni0uODYuODEtMS4yWiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEyOC4wNiwxMjIuODFjLS41NS0uMzItMS4xOS0uNDgtMS45LS40OHMtMS4zNS4xNi0xLjkxLjQ4Yy0uNTcuMzItMS4wMS43Ny0xLjMzLDEuMzQtLjMyLjU3LS40OCwxLjIyLS40OCwxLjk2cy4xNywxLjM5LjUsMS45Ni44LDEuMDIsMS40LDEuMzRjLjYuMzMsMS4zLjQ5LDIuMDkuNDkuNjIsMCwxLjE3LS4xLDEuNjctLjMxLjUtLjIxLjkyLS41LDEuMjUtLjlsLS43NC0uODdjLS4yNy4zLS41OS41Mi0uOTQuNjctLjM2LjE1LS43Ni4yMi0xLjIuMjItLjUzLDAtMS0uMTEtMS40MS0uMzItLjQxLS4yMS0uNzMtLjUyLS45Ni0uOS0uMTctLjI4LS4yNS0uNi0uMy0uOTVoNmMwLS4wNi4wMi0uMTMuMDItLjIxLDAtLjA3LDAtLjE0LDAtLjIsMC0uNzctLjE2LTEuNDQtLjQ3LTIuMDEtLjMxLS41Ny0uNzQtMS4wMi0xLjI5LTEuMzRaTTEyNC45MSwxMjMuNzhjLjM2LS4yMS43OC0uMzEsMS4yNS0uMzFzLjg5LjEsMS4yNS4zMWMuMzYuMjEuNjQuNS44NS44OC4xNS4yOC4yMy42LjI2Ljk0aC00LjczYy4wNC0uMzQuMTItLjY1LjI3LS45My4yMS0uMzguNDktLjY3Ljg1LS44OFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xMzIuODUsMTI3Ljk5Yy0uMjYsMC0uNDkuMDktLjY3LjI3cy0uMjguNDEtLjI4LjY5LjA5LjUxLjI4LjY5LjQxLjI3LjY3LjI3LjQ3LS4wOS42NS0uMjcuMjctLjQxLjI3LS42OS0uMDktLjUxLS4yNy0uNjktLjQtLjI3LS42NS0uMjdaIi8+CiAgICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjEzOS4yMiAxMjguMDggMTM1LjY5IDEyMC4wMyAxMzQuMTggMTIwLjAzIDEzOC40OSAxMjkuODMgMTM5Ljg4IDEyOS44MyAxNDQuMTcgMTIwLjAzIDE0Mi43NyAxMjAuMDMgMTM5LjIyIDEyOC4wOCIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTE0NS4yNCwxMjcuOTljLS4yNiwwLS40OS4wOS0uNjcuMjdzLS4yOC40MS0uMjguNjkuMDkuNTEuMjguNjkuNDEuMjcuNjcuMjcuNDctLjA5LjY1LS4yNy4yNy0uNDEuMjctLjY5LS4wOS0uNTEtLjI3LS42OS0uNC0uMjctLjY1LS4yN1oiLz4KICAgICAgPC9nPgogICAgICA8Zz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNzEuNzYsNDkuODJjLS4zNiwwLS43MS0uMi0uODktLjU0QzE1Ni43NSwyMS44NCwxMjguODYsMy43Nyw5OC4wNywyLjEyYy0xNS4yOS0uODItMzAuNTYsMi40MS00NC4xMyw5LjMzLS40OS4yNS0xLjA5LjA1LTEuMzQtLjQ0LS4yNS0uNDktLjA2LTEuMDkuNDQtMS4zNUM2Ni45MiwyLjU5LDgyLjU0LS43MSw5OC4xOC4xM2MzMS40OSwxLjY4LDYwLjAyLDIwLjE2LDc0LjQ3LDQ4LjIzLjI1LjQ5LjA2LDEuMDktLjQzLDEuMzUtLjE1LjA4LS4zLjExLS40Ni4xMVoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik05My41LDE3OC4wOGMtMS42LDAtMy4yMS0uMDQtNC44MS0uMTMtNDEuMjktMi4yMS03NS4zNC0zMi4xLTgyLjgyLTcyLjcxLS4xLS41NC4yNi0xLjA2LjgtMS4xNi41NC0uMSwxLjA2LjI2LDEuMTYuOCw3LjMxLDM5LjY5LDQwLjYsNjguOTIsODAuOTYsNzEuMDcsNy45OS40MywxNS45Ni0uMjMsMjMuNjktMS45Ni41NC0uMTIsMS4wNy4yMiwxLjE5Ljc2LjEyLjU0LS4yMiwxLjA3LS43NiwxLjE5LTYuMzUsMS40Mi0xMi44NywyLjE0LTE5LjQyLDIuMTRaIi8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==" x="309.00" y="309.00" width="62" height="62" clip-path="url(#logo_clip)"/>
-  <text x="340" y="390" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#FFFFFF">Anchor Circle · Vorstand</text>
+  <text x="340" y="390" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="8.5" font-weight="bold" fill="#FFFFFF">Anchor Circle · Vorstand</text>
 </svg>
