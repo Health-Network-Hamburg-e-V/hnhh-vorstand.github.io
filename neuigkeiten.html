@@ -409,15 +409,18 @@
   function tryLoadImages(code, callback) {
     var imgs = [];
     var base = 'images/news/' + code + '/' + code;
-    function tryNext(n) {
+    var exts = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'];
+    function tryExt(n, eIdx) {
       if (n > 8) { callback(imgs); return; }
+      if (eIdx >= exts.length) { tryExt(n + 1, 0); return; }
       var num = (n < 10 ? '0' : '') + n;
+      var src = base + '-' + num + '.' + exts[eIdx];
       var img = new Image();
-      img.onload = function() { imgs.push(base + '-' + num + '.jpg'); tryNext(n + 1); };
-      img.onerror = function() { callback(imgs); };
-      img.src = base + '-' + num + '.jpg';
+      img.onload = function() { imgs.push(src); tryExt(n + 1, 0); };
+      img.onerror = function() { tryExt(n, eIdx + 1); };
+      img.src = src;
     }
-    tryNext(1);
+    tryExt(1, 0);
   }
 
 
