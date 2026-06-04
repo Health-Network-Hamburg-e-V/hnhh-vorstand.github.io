@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Werdet Förderpartner des Health Network Hamburg e.V. – als Einzelperson, Startup oder Unternehmen. Seid sichtbar im aktivsten Gesundheitsnetzwerk Hamburgs." />
+  <link rel="canonical" href="https://healthnetworkhamburg.de/foerdermitglieder" />
+  <meta property="og:title" content="Förderpartner werden – Health Network Hamburg e.V." />
+  <meta property="og:description" content="Unterstützt die Mission des HNHH und seid Teil eines wachsenden Ökosystems für die Gesundheitsversorgung von morgen." />
+  <meta property="og:image" content="https://healthnetworkhamburg.de/images/og-preview.jpg" />
+  <meta property="og:url" content="https://healthnetworkhamburg.de/foerdermitglieder" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Health Network Hamburg e.V.",
+    "url": "https://healthnetworkhamburg.de",
+    "email": "vorstand@healthnetworkhamburg.de",
+    "description": "Brückenplattform für Gesundheitsinnovation in der Metropolregion Hamburg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hamburg",
+      "addressCountry": "DE"
+    }
+  }
+  </script>
+  <title>Förderpartner werden – Health Network Hamburg e.V.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/hnhh_favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/hnhh_favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <style>
+    :root {
+      --rot: #C8102E; --rot-dunkel: #a00d25; --rot-hell: #f5e8eb;
+      --weiss: #FFFFFF; --grau-leicht: #f7f7f7; --grau-mittel: #e0e0e0;
+      --text: #1a1a1a; --text-leicht: #555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--weiss); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* HEADER */
+    header { background: var(--weiss); border-bottom: 3px solid var(--rot); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-area img { height: 56px; width: auto; }
+    .logo-text .name { font-family: 'Montserrat',sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--rot); letter-spacing: -0.01em; display: block; }
+    .logo-text .tagline { font-size: 0.68rem; color: var(--text-leicht); letter-spacing: 0.06em; text-transform: uppercase; display: block; }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--rot); }
+    nav a.active { color: var(--rot); }
+    .nav-cta { background: var(--rot) !important; color: var(--weiss) !important; padding: 8px 18px !important; border-radius: 5px !important; font-weight: 700 !important; transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--rot-dunkel) !important; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); }
+
+    /* HERO */
+    .hero { border-bottom: 3px solid var(--rot); padding: 56px 40px 48px; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 12px; font-family: 'Inter', sans-serif; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 14px; color: white; }
+    .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 620px; }
+
+    /* MAIN */
+    main { max-width: 1100px; margin: 0 auto; padding: 64px 24px 80px; }
+
+    /* SECTION HEADER */
+    .section-header { display: flex; align-items: center; gap: 16px; margin: 0 0 28px; }
+    .section-header h2 { font-size: 1.75rem; font-weight: 700; white-space: nowrap; letter-spacing: -0.01em; }
+    .section-line { flex: 1; height: 2px; background: var(--rot); opacity: 0.2; }
+
+    /* KENNZAHLEN */
+    .kennzahlen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+    .kz-card { background: var(--grau-leicht); border: 1px solid var(--grau-mittel); border-radius: 10px; padding: 20px 18px; text-align: center; }
+    .kz-zahl { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--rot); line-height: 1; margin-bottom: 6px; min-height: 2.6rem; display: flex; align-items: center; justify-content: center; }
+    .kz-label { font-size: 0.82rem; color: var(--text-leicht); line-height: 1.4; }
+
+    /* INITIATIVEN */
+    .initiativen { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 48px; }
+    .initiative-tag { background: var(--rot); color: var(--weiss); font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 5px; }
+
+    /* PAKETE */
+    .pakete-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 16px; }
+    .paket-card { border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .paket-header { padding: 20px 20px 16px; border-bottom: 1px solid var(--grau-mittel); }
+    .paket-type { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rot); margin-bottom: 6px; }
+    .paket-preis { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--text); line-height: 1; }
+    .paket-preis-sub { font-size: 0.78rem; color: var(--text-leicht); margin-top: 4px; }
+    .paket-body { padding: 16px 20px 20px; flex: 1; }
+    .paket-features { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .paket-features li { font-size: 0.88rem; color: var(--text-leicht); line-height: 1.5; padding-left: 18px; position: relative; }
+    .paket-features li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--rot); }
+    .paket-features li.minus { color: var(--grau-mittel); }
+    .paket-features li.minus::before { background: var(--grau-mittel); }
+
+    /* VERGLEICH AKKORDEON */
+    .vergleich-details { border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; margin-bottom: 48px; }
+    .vergleich-summary { padding: 16px 22px; background: var(--rot); color: var(--weiss); cursor: pointer; user-select: none; list-style: none; display: flex; align-items: center; justify-content: space-between; font-weight: 700; font-size: 0.92rem; font-family: 'Montserrat', sans-serif; }
+    .vergleich-summary::-webkit-details-marker { display: none; }
+    .vergleich-chevron { font-size: 1rem; color: rgba(255,255,255,0.8); transition: transform 0.25s; }
+    details[open] .vergleich-chevron { transform: rotate(180deg); }
+    .vergleich-table-wrap { overflow-x: auto; }
+    .vergleich-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .vergleich-table thead tr { background: var(--rot-hell); }
+    .vergleich-table th { padding: 13px 18px; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rot); border-bottom: 2px solid rgba(200,16,46,0.15); }
+    .vergleich-table th:not(:first-child) { text-align: center; }
+    .vergleich-table tbody tr:nth-child(even) { background: #fdf5f7; }
+    .vergleich-table tbody tr:nth-child(odd) { background: var(--weiss); }
+    .vergleich-table tbody tr:last-child { background: var(--rot); }
+    .vergleich-table tbody tr:last-child td { color: var(--weiss); font-weight: 800; border-bottom: none; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; }
+    .vergleich-table td { padding: 12px 18px; border-bottom: 1px solid rgba(200,16,46,0.07); color: var(--text-leicht); }
+    .vergleich-table td:not(:first-child) { text-align: center; font-weight: 600; color: var(--text); }
+    .vergleich-table .check { color: #2e7d32; font-size: 1.1rem; }
+    .vergleich-table .dash { color: var(--grau-mittel); font-weight: 400; font-size: 1rem; }
+    .vergleich-note { padding: 12px 18px; font-size: 0.78rem; color: var(--text-leicht); background: var(--rot-hell); border-top: 1px solid rgba(200,16,46,0.1); }
+
+    /* ONE-PAGER BOX */
+    .onepager-box { background: var(--rot-hell); border-left: 4px solid var(--rot); border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .onepager-box p { font-size: 0.92rem; color: var(--text); line-height: 1.55; }
+    .onepager-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--rot); color: var(--weiss); text-decoration: none; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
+    .onepager-btn:hover { background: var(--rot-dunkel); }
+
+
+    /* FÖRDERKACHELN */
+    .foerder-kachel {
+      border: 1px solid var(--grau-mittel); border-radius: 10px;
+      padding: 16px 14px; display: flex; flex-direction: column;
+      align-items: center; text-align: center; width: 160px; position: relative;
+      background: var(--weiss); text-decoration: none; color: inherit;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    a.foerder-kachel:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(200,16,46,0.12); }
+    .foerder-unternehmen:hover { border-color: var(--rot); }
+    .foerder-startup:hover { border-color: #333; }
+    .foerder-einzel:hover { border-color: var(--rot); }
+    .foerder-kachel-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 0 0 5px 5px; white-space: nowrap;
+    }
+    .foerder-unternehmen { border-color: var(--rot); }
+    .foerder-unternehmen .foerder-kachel-badge { background: var(--rot); color: var(--weiss); }
+    .foerder-startup { border-color: #555; }
+    .foerder-startup .foerder-kachel-badge { background: #555; color: var(--weiss); }
+    .foerder-einzel { border-color: var(--grau-mittel); }
+    .foerder-einzel .foerder-kachel-badge { background: var(--grau-mittel); color: var(--text); }
+    .foerder-logo-img { width: 80px; height: 56px; object-fit: contain; margin: 14px 0 8px; }
+    .foerder-person-avatar {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--rot-hell);
+      border: 2px solid var(--rot); display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700;
+      color: var(--rot); margin: 14px 0 8px;
+    }
+    .foerder-kachel-name { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .foerder-kachel-typ { font-size: 0.72rem; color: var(--text-leicht); }
+
+    /* FÖRDERMITGLIEDER DANKE */
+    .foerder-danke { background: var(--grau-leicht); border: 1px solid var(--grau-mittel); border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 48px; }
+    .foerder-danke-intro { font-size: 0.97rem; color: var(--text-leicht); line-height: 1.7; margin-bottom: 20px; }
+    .foerder-logo-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+    .foerder-placeholder { border: 2px dashed var(--grau-mittel); border-radius: 10px; padding: 18px 24px; display: flex; align-items: center; justify-content: center; min-width: 180px; min-height: 72px; }
+    .foerder-placeholder span { font-size: 0.82rem; color: var(--grau-mittel); font-style: italic; text-align: center; }
+
+    /* FORM SECTION */
+    .form-section { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+    .form-info h2 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; line-height: 1.25; }
+    .form-info h2 span { color: var(--rot); }
+    .form-info > p { font-size: 1rem; color: var(--text-leicht); line-height: 1.75; margin-bottom: 24px; }
+    .info-note { background: var(--rot-hell); border-left: 4px solid var(--rot); border-radius: 0 8px 8px 0; padding: 16px 18px; margin-bottom: 14px; font-size: 0.92rem; line-height: 1.65; }
+    .info-note strong { color: var(--rot); display: block; margin-bottom: 6px; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .contact-link { display: inline-flex; align-items: center; gap: 8px; color: var(--rot); text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 8px; transition: opacity 0.2s; }
+    .contact-link:hover { opacity: 0.75; }
+    .form-wrapper { background: var(--weiss); border: 1px solid var(--grau-mittel); border-radius: 12px; overflow: hidden; }
+    .form-wrapper-header { background: var(--rot); color: var(--weiss); padding: 16px 22px; display: flex; align-items: center; gap: 14px; }
+    .form-wrapper-header svg { flex-shrink: 0; }
+    .form-wrapper-header h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1px; }
+    .form-wrapper-header p { font-size: 0.78rem; opacity: 0.8; }
+    .form-embed iframe { width: 100%; min-height: 800px; border: none; display: block; }
+
+    /* FOOTER */
+    footer { background: var(--text); color: rgba(255,255,255,0.65); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 20px; align-items: center; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--weiss); }
+    .footer-li svg { width: 20px; height: 20px; fill: #0A66C2; display: block; }
+
+    @media (max-width: 900px) {
+      .form-section { grid-template-columns: 1fr; }
+      .pakete-grid { grid-template-columns: 1fr; }
+      .kennzahlen { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      header { padding: 12px 18px; }
+      .logo-area img { height: 44px; }
+      nav { display: none; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--weiss); border-top: 1px solid var(--grau-mittel); box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 14px 0; }
+      nav.open { display: flex; }
+      nav a { padding: 11px 22px; border-bottom: 1px solid var(--grau-mittel); }
+      .nav-cta { margin: 10px 22px 4px !important; width: calc(100% - 44px); text-align: center; }
+      .hamburger { display: flex; }
+      .hero { padding: 36px 20px 32px; }
+      main { padding: 40px 16px 60px; }
+      footer { padding: 22px 18px; flex-direction: column; align-items: flex-start; }
+      .kennzahlen { grid-template-columns: repeat(2, 1fr); }
+      .section-header h2 { white-space: normal; font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-area">
+    <img src="images/homepage/hnhh-logo.svg" alt="Health Network Hamburg e.V. Logo" />
+    <div class="logo-text">
+      <span class="name">Health Network Hamburg e.V.</span>
+      <span class="tagline">Gemeinsam für Gesundheit</span>
+    </div>
+  </a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="events.html">Events</a>
+    <a href="neuigkeiten.html">Neuigkeiten</a>
+    <a href="foerdermitglieder.html" class="active">Fördern</a>
+    <a href="mitglied-werden.html" class="nav-cta">Mitglied werden</a>
+  </nav>
+</header>
+
+<div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/heros/mitglied-werden.jpg'); background-size: cover; background-position: center top; border-bottom: none;">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">#HNHH · Förderpartnerschaft</div>
+    <h1>Unser Netzwerk stärken.</h1>
+    <p>Als Förderpartner unterstützt ihr unsere Mission und seid Teil eines wachsenden Ökosystems für die Gesundheitsversorgung von morgen.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- WARUM FÖRDERPARTNER -->
+  <div style="margin-bottom: 48px;">
+    <div class="section-header">
+      <h2>Warum Förderpartner werden?</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="font-size: 1rem; color: var(--text-leicht); line-height: 1.78; max-width: 780px; margin-bottom: 32px;">Als Förderpartner erhaltet ihr Zugang zu einem der aktivsten Gesundheitsnetzwerke Hamburgs. Ihr werdet sichtbar, vernetzt euch mit Entscheidern, Startups und Wissenschaft und unterstützt gemeinsam den Wandel im Gesundheitssystem.</p>
+
+    <div class="kennzahlen">
+      <div class="kz-card">
+        <div class="kz-zahl">880+</div>
+        <div class="kz-label">Mitglieder auf LinkedIn</div>
+      </div>
+      <div class="kz-card">
+        <div class="kz-zahl" id="memberCounterFoerder">—</div>
+        <div class="kz-label">Vereinsmitglieder</div>
+      </div>
+      <div class="kz-card">
+        <div class="kz-zahl">12</div>
+        <div class="kz-label">aktive Circles</div>
+      </div>
+      <div class="kz-card">
+        <div class="kz-zahl" style="font-size:2.6rem;">&#x221E;</div>
+        <div class="kz-label" style="margin-top:6px;">Potenzial</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.88rem; color: var(--text-leicht); margin-bottom: 20px; font-weight: 600;">Unsere Initiativen</p>
+    <div class="initiativen">
+      <span class="initiative-tag">KI Board Copilot</span>
+      <span class="initiative-tag">Gesunde Metropolregion Hamburg</span>
+      <span class="initiative-tag">Startup Mapping HH</span>
+      <span class="initiative-tag">Matchmaking Funding</span>
+      <span class="initiative-tag">Regulatory Radar</span>
+      <span class="initiative-tag">Mitgliederplattform</span>
+    </div>
+  </div>
+
+  <!-- PAKETE -->
+  <div style="margin-bottom: 8px;">
+    <div class="section-header">
+      <h2>Förderpakete</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="pakete-grid">
+
+      <!-- Einzelperson / Selbstständige -->
+      <div class="paket-card">
+        <div class="paket-header">
+          <div class="paket-type">Einzelperson&nbsp;/ Selbstständige</div>
+          <div class="paket-preis">300&nbsp;€ <span style="font-size: 1rem; font-weight: 500; color: var(--text-leicht);">/ Jahr</span></div>
+          <div class="paket-preis-sub">Gemeinnützige Vereine: kostenfrei</div>
+        </div>
+        <div class="paket-body">
+          <ul class="paket-features">
+            <li>10 Apéros pro Jahr</li>
+            <li>Netzwerk-Zugang &amp; Mitarbeit in Circles</li>
+            <li>Namentliche Erwähnung auf der Website</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Startup -->
+      <div class="paket-card">
+        <div class="paket-header">
+          <div class="paket-type">Startup</div>
+          <div class="paket-preis">1.000&nbsp;€ <span style="font-size: 1rem; font-weight: 500; color: var(--text-leicht);">/ Jahr</span></div>
+          <div class="paket-preis-sub">Jahresumsatz bis 1&nbsp;Mio.&nbsp;€</div>
+        </div>
+        <div class="paket-body">
+          <ul class="paket-features">
+            <li>10 Apéros pro Jahr</li>
+            <li>Netzwerk-Zugang &amp; Mitarbeit in Circles</li>
+            <li>Namentliche Erwähnung auf der Website</li>
+            <li>Logo-Präsenz auf HNHH-Website</li>
+            <li>1× Fachimpuls in einem Circle pro Jahr</li>
+            <li>Jährlicher Austausch mit dem Vorstand</li>
+            <li>Namensnennung bei Events</li>
+            <li>Sichtbarkeit in Publikationen</li>
+            <li>Gastgeberfunktion für HNHH-Formate</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Unternehmen -->
+      <div class="paket-card">
+        <div class="paket-header">
+          <div class="paket-type">Unternehmen</div>
+          <div class="paket-preis">5.000&nbsp;€ <span style="font-size: 1rem; font-weight: 500; color: var(--text-leicht);">/ Jahr</span></div>
+          <div class="paket-preis-sub">Jahresumsatz über 1&nbsp;Mio.&nbsp;€</div>
+        </div>
+        <div class="paket-body">
+          <ul class="paket-features">
+            <li>10 Apéros pro Jahr</li>
+            <li>Netzwerk-Zugang &amp; Mitarbeit in Circles</li>
+            <li>Namentliche Erwähnung auf der Website</li>
+            <li>Logo-Präsenz auf HNHH-Website</li>
+            <li>2× Fachimpuls in einem Circle pro Jahr</li>
+            <li>Halbjährlicher Austausch mit dem Vorstand</li>
+            <li>Namensnennung bei Events</li>
+            <li>Sichtbarkeit in Publikationen</li>
+            <li>Gastgeberfunktion für HNHH-Formate</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size: 0.78rem; color: var(--text-leicht); margin-bottom: 16px;">* Gemeinnützige Vereine: kostenfrei. Fördermitglieder haben kein Stimmrecht. Einbindungsformen sind keine Exklusivleistungen gem. §7 Abs. 2 Satzung.</p>
+  </div>
+
+  <!-- VERGLEICHSTABELLE AKKORDEON -->
+  <details class="vergleich-details" style="margin-bottom: 48px;">
+    <summary class="vergleich-summary">
+      Vollständige Leistungsübersicht einblenden
+      <span class="vergleich-chevron">&#8964;</span>
+    </summary>
+    <div class="vergleich-table-wrap">
+      <table class="vergleich-table">
+        <thead>
+          <tr>
+            <th style="width: 45%;">Einbindung</th>
+            <th>Einzelperson / Selbstständige</th>
+            <th>Startup</th>
+            <th>Unternehmen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>10 Apéros pro Jahr</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Netzwerk-Zugang &amp; Mitarbeit in Circles</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Namentliche Erwähnung (Website)</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Logo-Präsenz auf HNHH-Website</td><td class="dash">&#8211;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Fachimpuls in einem Circle</td><td class="dash">&#8211;</td><td>1× pro Jahr</td><td>2× pro Jahr</td></tr>
+          <tr><td>Austausch mit dem Vorstand</td><td class="dash">&#8211;</td><td>Jährlich</td><td>Halbjährlich</td></tr>
+          <tr><td>Namensnennung bei Events</td><td class="dash">&#8211;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Sichtbarkeit in Publikationen</td><td class="dash">&#8211;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Gastgeberfunktion für HNHH-Formate</td><td class="dash">&#8211;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Jährlicher Beitrag</td><td>300&nbsp;€ / 0&nbsp;€*</td><td>1.000&nbsp;€</td><td>5.000&nbsp;€</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="vergleich-note">* Gemeinnützige Vereine sind beitragsfrei. Fördermitglieder haben kein Stimmrecht. Einbindungsformen sind keine Exklusivleistungen gem. §7 Abs. 2 Satzung.</div>
+  </details>
+
+  <!-- ONE-PAGER -->
+  <div class="onepager-box">
+    <p><strong>Alle Infos auf einen Blick:</strong> Ladet unseren One-Pager zur Förderpartnerschaft 2026 herunter – mit vollständiger Leistungsübersicht und Kontaktdaten.</p>
+    <a href="images/HNHH_Foerdermitglieder_2026.pdf" target="_blank" class="onepager-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      One-Pager herunterladen
+    </a>
+  </div>
+
+  <!-- UNSERE FÖRDERMITGLIEDER -->
+  <div style="margin-bottom: 48px;">
+    <div class="section-header">
+      <h2>Unsere Fördermitglieder</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="foerder-danke">
+      <p class="foerder-danke-intro">Wir danken allen, die unsere Mission aktiv unterstützen und das Health Network Hamburg e.V. als Förderpartner begleiten. Ihr Engagement macht unsere Arbeit möglich.</p>
+      <div class="foerder-logo-grid">
+
+        <a href="#" class="foerder-kachel foerder-unternehmen">
+          <div class="foerder-kachel-badge">Unternehmen</div>
+          <img src="images/homepage/hnhh-logo.svg" alt="Möhrle Happ Luther Logo" class="foerder-logo-img" />
+          <div class="foerder-kachel-name">Möhrle Happ Luther</div>
+          <div class="foerder-kachel-typ">Anwaltskanzlei</div>
+        </a>
+
+        <a href="#" class="foerder-kachel foerder-startup">
+          <div class="foerder-kachel-badge">Startup</div>
+          <img src="images/homepage/hnhh-logo.svg" alt="Alstertext Logo" class="foerder-logo-img" />
+          <div class="foerder-kachel-name">Alstertext</div>
+          <div class="foerder-kachel-typ">Startup</div>
+        </a>
+
+        <a href="#" class="foerder-kachel foerder-einzel">
+          <div class="foerder-kachel-badge">Fördermitglied</div>
+          <div class="foerder-person-avatar">MM</div>
+          <div class="foerder-kachel-name">Marie Mustermann</div>
+          <div class="foerder-kachel-typ">Einzelperson</div>
+        </a>
+
+        <a href="#" class="foerder-kachel foerder-einzel">
+          <div class="foerder-kachel-badge">Fördermitglied</div>
+          <div class="foerder-person-avatar">MM</div>
+          <div class="foerder-kachel-name">Max Mustermann</div>
+          <div class="foerder-kachel-typ">Einzelperson</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULAR -->
+  <div class="form-section" id="anmeldung">
+
+    <div class="form-info">
+      <h2>Jetzt <span>Förderpartner</span> werden</h2>
+      <p>Füllt das Formular aus – wir melden uns anschließend bei euch und freuen uns, euch persönlich kennenzulernen.</p>
+
+      <div class="info-note">
+        <strong>Satzung &amp; Beitragsordnung</strong>
+        Hier findet ihr die <a href="images/HNHH_Satzung_05-2026.pdf" target="_blank" style="color:var(--rot);font-weight:600;">Satzung</a> und die <a href="images/HNHH_Beitragsordnung_05-2026.pdf" target="_blank" style="color:var(--rot);font-weight:600;">Beitragsordnung</a> des HNHH.
+      </div>
+
+      <div class="info-note">
+        <strong>Wer kann Förderpartner werden?</strong>
+        Einzelpersonen, gemeinnützige Organisationen, Startups und Unternehmen, die die Mission des HNHH unterstützen möchten – unabhängig vom Standort.
+      </div>
+
+      <div class="info-note">
+        <strong>Paket-Auswahl</strong>
+        Im Formular könnt ihr direkt auswählen, welches Förderpaket zu euch passt:
+        <ul style="list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:4px;">
+          <li style="font-size:0.88rem;padding-left:14px;position:relative;">
+            <span style="position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--rot);display:block;"></span>
+            <strong>Unternehmen</strong> – 5.000&nbsp;€/Jahr (Umsatz über 1&nbsp;Mio.&nbsp;€)
+          </li>
+          <li style="font-size:0.88rem;padding-left:14px;position:relative;">
+            <span style="position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--rot);display:block;"></span>
+            <strong>Startup</strong> – 1.000&nbsp;€/Jahr (Umsatz bis 1&nbsp;Mio.&nbsp;€)
+          </li>
+          <li style="font-size:0.88rem;padding-left:14px;position:relative;">
+            <span style="position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--rot);display:block;"></span>
+            <strong>Einzelperson / Selbstständige</strong> – 300&nbsp;€/Jahr
+          </li>
+          <li style="font-size:0.88rem;padding-left:14px;position:relative;">
+            <span style="position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--rot);display:block;"></span>
+            <strong>Gemeinnütziger Verein (gNPO)</strong> – kostenfrei*
+          </li>
+        </ul>
+        <p style="font-size:0.78rem;color:var(--text-leicht);margin-top:8px;">* Wir behalten uns vor, einen Nachweis der Gemeinnützigkeit anzufordern.</p>
+      </div>
+
+      <div class="info-note">
+        <strong>Was passiert nach der Anmeldung?</strong>
+        Ihr erhaltet eine Bestätigungsmail. Wir prüfen den Antrag und melden uns kurzfristig bei euch zurück. Bei gemeinnützigen Organisationen behalten wir uns vor, einen entsprechenden Nachweis der Gemeinnützigkeit anzufordern.
+      </div>
+
+      <a href="images/HNHH_Foerdermitglieder_2026.pdf" target="_blank" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        One-Pager Förderpartnerschaft herunterladen
+      </a>
+
+      <a href="kontakt.html" class="contact-link" style="margin-top: 4px;">
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="17" rx="2" stroke="#C8102E" stroke-width="1.75"/><path d="M4 11L16 19L28 11" stroke="#C8102E" stroke-width="1.75" stroke-linecap="round"/></svg>
+        Fragen? Schreibt uns direkt
+      </a>
+    </div>
+
+    <div class="form-wrapper">
+      <div class="form-wrapper-header">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="2" stroke="white" stroke-width="1.75"/><path d="M9 11H23M9 16H23M9 21H17" stroke="white" stroke-width="1.75" stroke-linecap="round"/></svg>
+        <div>
+          <h3>Förderpartnerschaftsantrag</h3>
+          <p>Health Network Hamburg e.V.</p>
+        </div>
+      </div>
+      <div class="form-embed">
+        <iframe src="https://easyverein.com/public/HNHH/applicationform/25869?iframe=True" style="width: 100%; min-height: 800px; border: none; display: block;"></iframe>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-copy">&copy; <span id="year"></span> Health Network Hamburg e.V.</div>
+  <div class="footer-links">
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="https://www.linkedin.com/groups/13128513/" target="_blank" class="footer-li">
+      <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script data-cfasync="false">
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Live member counter — 1:1 from index.html
+  var counterEl = document.getElementById('memberCounterFoerder');
+  function animateCounter(target) {
+    var start = Math.max(0, target - 30), duration = 1200, startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      counterEl.textContent = Math.floor(start + (target - start) * progress) + '+';
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  fetch('https://docs.google.com/spreadsheets/d/1inAiEvDK3ORJUCkBkaTZVbK8PWJ7U8gIlV3hpEJoXMw/gviz/tq?tqx=out:csv&sheet=Mitgliedscounter&range=A1')
+    .then(function(r) { return r.text(); })
+    .then(function(t) { var v = parseInt(t.replace(/[^0-9]/g,'')); animateCounter(v > 0 ? v : 120); })
+    .catch(function() { animateCounter(120); });
+
+  function toggleMenu() {
+    document.getElementById('nav').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var nav = document.getElementById('nav'), h = document.getElementById('hamburger');
+    if (nav && h && !nav.contains(e.target) && !h.contains(e.target)) nav.classList.remove('open');
+  });
+</script>
+</body>
+</html>
