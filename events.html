@@ -91,6 +91,15 @@
     .event-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-bottom: 2px; }
     .event-title-area h3 { font-size: 1.1rem; font-weight: 700; }
     .event-card-body { padding: 0; }
+
+    /* EVENT CARD: image below info (no-embed cards) */
+    .event-card-img {
+      width: 100%; aspect-ratio: 16/9; overflow: hidden;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .event-card-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
     .event-embed { line-height: 0; }
     .event-embed iframe { width: 100%; height: 490px; border: none; display: block; }
 
@@ -532,6 +541,7 @@
 
     var html = '<div class="events-grid">';
     rows.forEach(function(cols) {
+      var code     = (cols[0]  || '').trim();
       var nummer   = (cols[1]  || '').trim();
       var label    = (cols[2]  || '').trim();
       var titel    = (cols[3]  || '').trim();
@@ -542,7 +552,7 @@
       var embedUrl = (cols[8]  || '').trim();
       var kalLink  = (cols[9]  || '').trim();
 
-      html += '<div class="event-card">' +
+      html += '<div class="event-card" data-event-code="' + esc(code) + '">' +
         '<div class="event-card-header">' +
           '<div class="event-number">' + esc(nummer) + '</div>' +
           '<div class="event-title-area">' +
@@ -578,6 +588,30 @@
             iconCal('white') + 'In Google Kalender eintragen</a>';
         }
         html += '</div>';
+
+        // Try to load event image (no-embed cards only)
+        if (code) {
+          (function(cardCode) {
+            var exts = IMG_EXTS;
+            var base = 'images/events/' + cardCode;
+            function tryExt(ei) {
+              if (ei >= exts.length) return;
+              var img = new Image();
+              img.onload = function() {
+                var card = document.querySelector('[data-event-code="' + cardCode + '"]');
+                if (card) {
+                  var imgDiv = document.createElement('div');
+                  imgDiv.className = 'event-card-img';
+                  imgDiv.innerHTML = '<img src="' + base + '.' + exts[ei] + '" alt="' + cardCode + '" />';
+                  card.querySelector('.event-card-body').appendChild(imgDiv);
+                }
+              };
+              img.onerror = function() { tryExt(ei + 1); };
+              img.src = base + '.' + exts[ei];
+            }
+            tryExt(0);
+          })(code);
+        }
       }
 
       html += '</div></div>'; // event-card-body / event-card
