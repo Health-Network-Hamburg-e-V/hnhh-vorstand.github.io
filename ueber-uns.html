@@ -252,6 +252,44 @@
     .circle-structure-img { width: 100%; max-width: 700px; display: block; margin: 28px auto 0; border-radius: 12px; }
     .highlight-box { background: var(--rot-hell); border-left: 4px solid var(--rot); border-radius: 0 8px 8px 0; padding: 18px 22px; margin-top: 24px; }
     .highlight-box p { color: var(--text); font-style: italic; margin-bottom: 0; }
+
+    /* CIRCLE LEADS OVERVIEW IMAGE + LIGHTBOX */
+    .cl-overview-wrap {
+      margin-top: 32px; text-align: center;
+    }
+    .cl-overview-hint {
+      font-size: 0.88rem; color: var(--text-leicht); margin-bottom: 12px; line-height: 1.6;
+    }
+    .cl-overview-hint strong { color: var(--text); }
+    .cl-overview-img-btn {
+      display: inline-block; cursor: zoom-in; border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--grau-mittel); transition: box-shadow 0.2s, transform 0.2s;
+      max-width: 100%;
+    }
+    .cl-overview-img-btn:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.13); transform: translateY(-2px); }
+    .cl-overview-img-btn img { width: 100%; max-width: 700px; display: block; border-radius: 10px; }
+    .cl-overview-caption {
+      font-size: 0.78rem; color: var(--text-leicht); margin-top: 8px; font-style: italic;
+    }
+
+    /* LIGHTBOX */
+    .cl-lightbox {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88);
+      z-index: 9999; align-items: center; justify-content: center; padding: 20px;
+    }
+    .cl-lightbox.open { display: flex; }
+    .cl-lightbox img {
+      max-width: 95vw; max-height: 92vh; border-radius: 8px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.6); object-fit: contain;
+    }
+    .cl-lightbox-close {
+      position: fixed; top: 16px; right: 20px;
+      background: rgba(255,255,255,0.15); border: none; color: white;
+      width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; z-index: 10000;
+    }
+    .cl-lightbox-close:hover { background: rgba(255,255,255,0.3); }
   </style>
 </head>
 <body>
@@ -723,6 +761,21 @@
 
       </div><!-- /circles-wrapper -->
 
+      <!-- Circle Leads Overview Image -->
+      <div class="cl-overview-wrap">
+        <p class="cl-overview-hint"><strong>Alle Circle Leads auf einen Blick</strong> — klickt auf die Übersicht für eine größere Ansicht.</p>
+        <button class="cl-overview-img-btn" onclick="openCLLightbox()" aria-label="Circle Leads Übersicht vergrößern">
+          <img src="images/circle-leads/Circle-Leads_Overview.png" alt="Circle Leads Übersicht – Health Network Hamburg e.V." />
+        </button>
+        <p class="cl-overview-caption">Klicken zum Vergrößern</p>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="cl-lightbox" id="clLightbox" onclick="closeCLLightbox()">
+        <button class="cl-lightbox-close" onclick="closeCLLightbox()" aria-label="Schließen">&#x2715;</button>
+        <img src="images/circle-leads/Circle-Leads_Overview.png" alt="Circle Leads Übersicht – Health Network Hamburg e.V." onclick="event.stopPropagation()" />
+      </div>
+
       <p style="margin-top: 28px;">Circles und Projekte verstehen wir nicht isoliert, sondern als Teil eines gemeinsamen Innovationsökosystems. Entscheidend ist für uns immer die Frage: Wie kommen gute Ideen tatsächlich in das System, die Versorgung und die Wirkung für Menschen?</p>
     </div>
 
@@ -732,13 +785,13 @@
         <h2>Was Mitglieder bei uns finden</h2>
         <div class="section-line"></div>
       </div>
-      <p>HNHH soll ein Netzwerk mit echtem Mehrwert sein. Deshalb arbeiten wir an Formaten und Services, die Expertise sichtbar machen, Austausch erleichtern und Zusammenarbeit beschleunigen:</p>
+      <p>Im HNHH arbeiten Menschen gemeinsam daran, Gesundheitsinnovation in Hamburg voranzubringen. Dafür schaffen wir Räume und Formate, die diesen Zweck stärken:</p>
       <ul class="bullet-list">
-        <li>Zugang zu Kompetenzen und Know-how im Netzwerk</li>
-        <li>Spotlight-, Impuls- und Pitch-Formate</li>
-        <li>Mentoring, Sparring und methodische Unterstützung</li>
-        <li>Bessere interne Vernetzung</li>
-        <li>Anbahnung von Allianzen, Kooperationen und Task Forces</li>
+        <li>Wissenstransfer und fachlicher Austausch über Sektoren und Disziplinen hinweg</li>
+        <li>Impuls-, Diskussions- und Pitch-Formate zu relevanten Gesundheitsthemen</li>
+        <li>Gegenseitige Unterstützung und kollegialer Austausch auf Augenhöhe</li>
+        <li>Sektorenübergreifende Zusammenarbeit an gemeinsamen Themen und Projekten</li>
+        <li>Verbindung von Wissenschaft, Versorgung, Technologie und Gesundheitspolitik</li>
       </ul>
     </div>
 
@@ -772,6 +825,20 @@
 
 <script data-cfasync="false">
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Circle Leads Lightbox
+  function openCLLightbox() {
+    var lb = document.getElementById('clLightbox');
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCLLightbox() {
+    document.getElementById('clLightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCLLightbox();
+  });
 
   function toggleMenu() {
     document.getElementById('nav').classList.toggle('open');
