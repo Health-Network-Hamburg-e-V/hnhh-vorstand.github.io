@@ -370,6 +370,44 @@
       .hero-eyebrow::before { width: 16px; }
       .carousel-slide img { object-position: center 15%; }
     }
+
+    /* CIRCLE LEADS OVERVIEW */
+    .cl-overview-wrap {
+      margin-top: 32px; text-align: center;
+    }
+    .cl-overview-hint {
+      font-size: 0.88rem; color: var(--text-leicht); margin-bottom: 12px; line-height: 1.6;
+    }
+    .cl-overview-hint strong { color: var(--text); }
+    .cl-overview-img-btn {
+      display: inline-block; cursor: zoom-in; border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--grau-mittel); transition: box-shadow 0.2s, transform 0.2s;
+      max-width: 100%;
+    }
+    .cl-overview-img-btn:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.13); transform: translateY(-2px); }
+    .cl-overview-img-btn img { width: 100%; max-width: 700px; display: block; border-radius: 10px; }
+    .cl-overview-caption {
+      font-size: 0.78rem; color: var(--text-leicht); margin-top: 8px; font-style: italic;
+    }
+
+    /* LIGHTBOX */
+    .cl-lightbox {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88);
+      z-index: 9999; align-items: center; justify-content: center; padding: 20px;
+    }
+    .cl-lightbox.open { display: flex; }
+    .cl-lightbox img {
+      max-width: 95vw; max-height: 92vh; border-radius: 8px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.6); object-fit: contain;
+    }
+    .cl-lightbox-close {
+      position: fixed; top: 16px; right: 20px;
+      background: rgba(255,255,255,0.15); border: none; color: white;
+      width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; z-index: 10000;
+    }
+    .cl-lightbox-close:hover { background: rgba(255,255,255,0.3); }
   </style>
 </head>
 <body>
@@ -454,6 +492,22 @@
   </div>
   <p class="circles-intro">Das Health Network Hamburg e.V. ist nach Holacracy-Prinzipien organisiert – in aktuell 11 thematischen Circles, getragen vom Vorstand als Anchor Circle für Vereinskultur, Strategie und Governance.</p>
 
+  <!-- Circle Leads Overview Image -->
+  <div class="cl-overview-wrap">
+    <p class="cl-overview-hint"><strong>Alle Circle Leads auf einen Blick</strong> — klickt auf die Übersicht für eine größere Ansicht.</p>
+    <button class="cl-overview-img-btn" onclick="openCLLightbox()" aria-label="Circle Leads Übersicht vergrößern">
+      <img src="images/circle-leads/Circle-Leads_Overview.png" alt="Circle Leads Übersicht – Health Network Hamburg e.V." />
+    </button>
+    <p class="cl-overview-caption">Klicken zum Vergrößern</p>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="cl-lightbox" id="clLightbox" onclick="closeCLLightbox()">
+    <button class="cl-lightbox-close" onclick="closeCLLightbox()" aria-label="Schließen">&#x2715;</button>
+    <img src="images/circle-leads/Circle-Leads_Overview.png" alt="Circle Leads Übersicht – Health Network Hamburg e.V." onclick="event.stopPropagation()" />
+  </div>
+
+  <!--
   <div class="om-container">
     <div class="om-header">Vorstand / Anchor Circle &nbsp;·&nbsp; Vereinskultur &nbsp;·&nbsp; Strategie &nbsp;·&nbsp; Governance</div>
 
@@ -517,6 +571,7 @@
       </div>
     </div>
   </div>
+-->
 
   <!-- ENTDECKE DAS NETZWERK -->
   <div class="section-header"><h2>Entdecke das Netzwerk</h2><div class="section-line"></div></div>
@@ -753,6 +808,21 @@
 </footer>
 
 <script data-cfasync="false">
+
+// Circle Leads Lightbox
+function openCLLightbox() {
+  var lb = document.getElementById('clLightbox');
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCLLightbox() {
+  document.getElementById('clLightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCLLightbox();
+});
+
 // ── MENU ──
 function toggleMenu() {
   document.getElementById('nav').classList.toggle('open');
@@ -902,20 +972,29 @@ fetch('https://docs.google.com/spreadsheets/d/1inAiEvDK3ORJUCkBkaTZVbK8PWJ7U8gIl
 // Images: images/news/{Code}/{Code}-01.jpg, -02.jpg, ...
 
 function tryLoadImages(code, callback) {
-  // Try loading images -01, -02, -03... until 404
+  // Try loading images -01, -02, -03... until none found
   var imgs = [];
   var base = 'images/news/' + code + '/' + code;
   var maxTry = 6;
-  var tried = 0;
+  var exts = ['jpg', 'jpeg', 'JPG', 'JPEG', 'png', 'PNG', 'webp', 'WEBP'];
+
+  function tryExt(n, extIdx) {
+    if (extIdx >= exts.length) {
+      // No extension worked for this number – stop
+      callback(imgs);
+      return;
+    }
+    var num = (n < 10 ? '0' : '') + n;
+    var tryUrl = base + '-' + num + '.' + exts[extIdx];
+    var img = new Image();
+    img.onload = function() { imgs.push(tryUrl); tryNext(n + 1); };
+    img.onerror = function() { tryExt(n, extIdx + 1); };
+    img.src = tryUrl;
+  }
 
   function tryNext(n) {
     if (n > maxTry) { callback(imgs); return; }
-    var num = (n < 10 ? '0' : '') + n;
-    var url = base + '-' + num + '.jpg';
-    var img = new Image();
-    img.onload = function() { imgs.push(url); tryNext(n + 1); };
-    img.onerror = function() { callback(imgs); }; // stop on first 404
-    img.src = url;
+    tryExt(n, 0);
   }
   tryNext(1);
 }
