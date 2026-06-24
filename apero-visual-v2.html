@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apéro Visual | Health Network Hamburg e.V.</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    :root {
+      --rot: #C8102E;
+      --rot-dunkel: #a00d25;
+      --rot-hell: #f5e8eb;
+      --dunkelgrau: #1a1a1a;
+      --mittelgrau: #555555;
+      --grau-hell: #f7f7f7;
+      --grau-mittel: #e0e0e0;
+      --weiss: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--grau-hell); color: var(--dunkelgrau); }
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+
+    /* ── HEADER ── */
+    header { background: var(--weiss); border-bottom: 3px solid var(--rot); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-area img { height: 52px; width: auto; }
+    .logo-text .name { font-family: 'Montserrat',sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--rot); display: block; }
+    .logo-text .tagline { font-size: 0.68rem; color: var(--mittelgrau); letter-spacing: 0.06em; text-transform: uppercase; display: block; }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { text-decoration: none; color: var(--dunkelgrau); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--rot); }
+    .nav-cta { background: var(--rot) !important; color: var(--weiss) !important; padding: 8px 18px !important; border-radius: 5px !important; font-weight: 700 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--dunkelgrau); border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero { background-size: cover; background-position: center; border-bottom: none; padding: 52px 40px 44px; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 14px; color: #fff; }
+    .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 620px; }
+
+    /* ── MAIN ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 44px 24px 80px; display: grid; grid-template-columns: 360px 1fr; gap: 40px; align-items: start; }
+
+    /* ── FORM PANEL ── */
+    .form-panel { background: var(--weiss); border: 1px solid var(--grau-mittel); border-radius: 14px; padding: 28px 24px; }
+    .form-panel h2 { font-size: 1rem; font-weight: 700; color: var(--dunkelgrau); margin-bottom: 22px; }
+    .form-section { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--grau-mittel); }
+    .form-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .form-section-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mittelgrau); margin-bottom: 12px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group:last-child { margin-bottom: 0; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--mittelgrau); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 10px 13px; border: 1.5px solid var(--grau-mittel); border-radius: 7px;
+      font-family: 'Inter', sans-serif; font-size: 0.92rem; color: var(--dunkelgrau); background: var(--weiss);
+      transition: border-color 0.2s, box-shadow 0.2s; appearance: none; -webkit-appearance: none;
+    }
+    .form-group textarea { resize: vertical; min-height: 72px; line-height: 1.5; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--rot); box-shadow: 0 0 0 3px rgba(200,16,46,0.08);
+    }
+    .select-wrap { position: relative; }
+    .select-wrap::after { content: ''; position: absolute; right: 13px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--mittelgrau); pointer-events: none; }
+    .char-counter { font-size: 0.72rem; color: var(--mittelgrau); text-align: right; margin-top: 4px; }
+    .char-counter.warn { color: var(--rot); }
+
+    /* Photo upload */
+    .upload-area { border: 2px dashed var(--grau-mittel); border-radius: 8px; padding: 22px 16px; text-align: center; cursor: pointer; position: relative; transition: border-color 0.2s, background 0.2s; }
+    .upload-area:hover { border-color: var(--rot); background: var(--rot-hell); }
+    .upload-area p { font-size: 0.84rem; color: var(--mittelgrau); line-height: 1.5; }
+    .upload-area span { color: var(--rot); font-weight: 600; }
+    .upload-area input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .upload-area.has-photo { border-color: var(--rot); background: var(--rot-hell); }
+    .upload-thumb { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; margin-bottom: 8px; display: none; }
+
+    /* Frame selector */
+    .frame-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .frame-opt { border: 2px solid var(--grau-mittel); border-radius: 9px; padding: 8px 6px 7px; cursor: pointer; text-align: center; transition: border-color 0.2s, background 0.2s; }
+    .frame-opt:hover { border-color: var(--rot); }
+    .frame-opt.active { border-color: var(--rot); background: var(--rot-hell); }
+    .frame-thumb { width: 100%; aspect-ratio: 1; border-radius: 5px; margin-bottom: 5px; position: relative; overflow: hidden; }
+    .frame-opt span { font-size: 0.68rem; font-weight: 600; color: var(--mittelgrau); }
+    .frame-opt.active span { color: var(--rot); }
+
+    /* Frame thumb: Polaroid */
+    .ft-polaroid { background: #fff; box-shadow: 2px 3px 8px rgba(0,0,0,0.18); transform: rotate(-3deg); }
+    .ft-polaroid .ft-photo { position: absolute; top: 8%; left: 8%; right: 8%; bottom: 28%; background: #b0bec5; border-radius: 2px; }
+    .ft-polaroid .ft-btm { position: absolute; bottom: 0; left: 0; right: 0; height: 28%; background: #fff; }
+    .ft-polaroid .ft-dot { position: absolute; bottom: 5px; left: 6px; width: 14px; height: 5px; background: var(--rot); border-radius: 1px; }
+
+    /* Frame thumb: Gradient */
+    .ft-gradient { background: linear-gradient(160deg, #2a2a2a 0%, #111 100%); }
+    .ft-gradient::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
+    .ft-gradient::after { content: ''; position: absolute; top: 8px; left: 8px; width: 18px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 1px; }
+
+    /* Frame thumb: Cinematic */
+    .ft-cinematic { background: #666; }
+    .ft-cinematic::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 18%; background: #111; }
+    .ft-cinematic::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 22%; background: #111; }
+
+    /* Text mode selector */
+    .text-mode-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+    .text-mode-opt { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border: 1.5px solid var(--grau-mittel); border-radius: 7px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .text-mode-opt:hover { border-color: var(--rot); }
+    .text-mode-opt input[type="radio"] { accent-color: var(--rot); width: 15px; height: 15px; flex-shrink: 0; }
+    .text-mode-opt label { font-size: 0.85rem; font-weight: 500; cursor: pointer; flex: 1; }
+    .text-mode-opt.active { border-color: var(--rot); background: var(--rot-hell); }
+    .text-mode-opt.active label { color: var(--rot); font-weight: 600; }
+    .event-text-preview { font-size: 0.78rem; color: var(--mittelgrau); background: var(--grau-hell); border-radius: 5px; padding: 8px 10px; margin-bottom: 12px; line-height: 1.5; font-style: italic; display: none; }
+
+    /* Download button */
+    .btn-download { display: block; width: 100%; background: var(--rot); color: var(--weiss); border: none; border-radius: 8px; padding: 14px 24px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 4px; }
+    .btn-download:hover { background: var(--rot-dunkel); transform: translateY(-1px); }
+    .btn-download:active { transform: translateY(0); }
+    .btn-download:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .linkedin-hint { margin-top: 12px; background: #EAF3FA; border-radius: 7px; padding: 11px 14px; font-size: 0.78rem; color: #1A6FA8; line-height: 1.55; }
+
+    /* ── PREVIEW PANEL ── */
+    .preview-panel h2 { font-size: 1rem; font-weight: 700; color: var(--dunkelgrau); margin-bottom: 18px; }
+
+    /* Polaroid display tilt wrapper — NOT captured, just for decoration */
+    .card-tilt-wrap {
+      display: flex; justify-content: center; align-items: center;
+      padding: 24px;
+      transition: transform 0.4s ease;
+    }
+    .card-tilt-wrap.tilt {
+      transform: rotate(-2deg);
+      filter: drop-shadow(0 16px 48px rgba(0,0,0,0.22)) drop-shadow(0 4px 12px rgba(0,0,0,0.12));
+    }
+    .card-tilt-wrap.shadow-flat {
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+    }
+
+    /* The actual card canvas – this is what html2canvas captures */
+    #card-canvas {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+      background: #1a1a1a;
+      /* Prevent sub-pixel blur on display */
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    /* ── FRAME: POLAROID ── */
+    #card-canvas.f-polaroid { background: #fff; overflow: hidden; }
+    .pol-photo {
+      position: absolute;
+      left: 6.5%; right: 6.5%; top: 6.5%; bottom: 27%;
+      background-size: cover; background-position: center top;
+      background-color: #2a2a2a;
+      filter: sepia(10%) contrast(1.03) brightness(0.97) saturate(0.90);
+    }
+    .pol-photo.no-photo {
+      background: linear-gradient(135deg, #2a2a2a 0%, #1a0510 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pol-photo-placeholder { text-align: center; }
+    .pol-photo-placeholder svg { opacity: 0.2; }
+    .pol-photo-placeholder p { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.25); margin-top: 8px; }
+    .pol-bottom {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 27%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 6.5% 0 6.5%;
+    }
+    .pol-logo-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .pol-logo-img { height: 30px; width: auto; display: block; }
+
+    /* Logo badge — keeps original colors visible on dark backgrounds */
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,255,0.96);
+      border-radius: 6px;
+      padding: 5px 9px;
+    }
+    .logo-badge img { display: block; }
+    .pol-event-label { font-family: 'Caveat', cursive; font-size: clamp(9px, 2vw, 12px); color: #aaa; font-weight: 400; }
+    .pol-name { font-family: 'Caveat', cursive; font-size: clamp(17px, 3.8vw, 24px); font-weight: 700; color: #1a1a1a; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .pol-role { font-family: 'Caveat', cursive; font-size: clamp(11px, 2.3vw, 14px); font-weight: 400; color: #666; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+    .pol-text { font-family: 'Caveat', cursive; font-size: clamp(10px, 2.1vw, 13px); font-weight: 400; color: #999; line-height: 1.3; margin-top: 2px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .pol-date { font-family: 'Caveat', cursive; font-size: clamp(9px, 1.9vw, 11px); color: #bbb; }
+
+    /* ── FRAME: GRADIENT ── */
+    #card-canvas.f-gradient { background: #1a1a1a; }
+    .grd-photo { position: absolute; inset: 0; background-size: cover; background-position: center top; background-color: #2a2a2a; }
+    .grd-photo.no-photo { background: linear-gradient(135deg, #2a2a2a 0%, #1a0510 100%); }
+    .grd-overlay-top {
+      position: absolute; top: 0; left: 0; right: 0; height: 35%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .grd-overlay-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 52%;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .grd-topbar { position: absolute; top: 0; left: 0; right: 0; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .grd-logo { height: 46px; width: auto; display: block; }
+    .grd-tag { font-family: 'Montserrat', sans-serif; font-size: clamp(8px, 1.6vw, 11px); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--rot); padding: 5px 10px; border-radius: 3px; }
+    .grd-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 20px; }
+    .grd-event-text { font-family: 'Inter', sans-serif; font-size: clamp(9px, 1.9vw, 12px); font-weight: 400; color: rgba(255,255,255,0.6); margin-bottom: 6px; line-height: 1.4; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .grd-name { font-family: 'Montserrat', sans-serif; font-size: clamp(16px, 3.5vw, 22px); font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .grd-role { font-family: 'Inter', sans-serif; font-size: clamp(10px, 2.1vw, 13px); font-weight: 400; color: rgba(255,255,255,0.65); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .grd-badge { display: inline-block; background: var(--rot); color: #fff; font-family: 'Montserrat', sans-serif; font-size: clamp(8px, 1.6vw, 10px); font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; margin-top: 8px; }
+
+    /* ── FRAME: CINEMATIC ── */
+    #card-canvas.f-cinematic { background: #000; }
+    .cin-photo { position: absolute; inset: 0; background-size: cover; background-position: center; background-color: #2a2a2a; }
+    .cin-photo.no-photo { background: linear-gradient(135deg, #2a2a2a 0%, #1a0510 100%); }
+    .cin-vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%);
+      pointer-events: none;
+    }
+    .cin-bar-top {
+      position: absolute; top: 0; left: 0; right: 0; height: 18%;
+      background: rgba(0,0,0,0.78);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 18px;
+    }
+    .cin-logo { height: 38px; width: auto; display: block; }
+    .cin-hashtag { font-family: 'Montserrat', sans-serif; font-size: clamp(8px, 1.4vw, 10px); font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+    .cin-bar-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 24%;
+      background: rgba(0,0,0,0.78);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 0 18px;
+    }
+    .cin-name { font-family: 'Montserrat', sans-serif; font-size: clamp(15px, 3.2vw, 20px); font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .cin-role { font-family: 'Inter', sans-serif; font-size: clamp(9px, 1.8vw, 12px); color: rgba(255,255,255,0.5); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .cin-event-text { font-family: 'Inter', sans-serif; font-size: clamp(8px, 1.6vw, 11px); color: rgba(255,255,255,0.4); margin-top: 3px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+    .cin-accent { position: absolute; top: 16%; left: 0; right: 0; height: 2px; background: var(--rot); }
+    .cin-accent-b { position: absolute; bottom: 22%; left: 0; right: 0; height: 2px; background: var(--rot); }
+
+    /* ── PLACEHOLDER ── */
+    .card-placeholder-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .card-placeholder-inner p { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.25); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--dunkelgrau); color: rgba(255,255,255,0.65); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 20px; align-items: center; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--weiss); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; padding: 28px 16px 60px; gap: 24px; }
+      .form-panel { order: 2; }
+      .preview-panel { order: 1; }
+      .card-tilt-wrap { padding: 12px; }
+    }
+    @media (max-width: 640px) {
+      header { padding: 12px 16px; }
+      .logo-area img { height: 40px; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 36px 18px 32px; }
+      footer { padding: 20px 18px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo-area">
+    <img id="header-logo" src="" alt="Health Network Hamburg e.V. Logo">
+    <div class="logo-text">
+      <span class="name">Health Network Hamburg e.V.</span>
+      <span class="tagline">Gemeinsam für Gesundheit</span>
+    </div>
+  </a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  <nav id="main-nav">
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="events.html">Events</a>
+    <a href="neuigkeiten.html">Neuigkeiten</a>
+    <a href="foerdermitglieder.html">Fördern</a>
+    <a href="mitglied-werden.html" class="nav-cta">Mitglied werden</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)), url('images/heros/mitglieder-visuals.jpg');">
+  <div class="hero-inner">
+    <div class="hero-eyebrow" id="hero-eyebrow">#HNHH · Visual</div>
+    <h1 id="hero-title">Ich war dabei!</h1>
+    <p id="hero-desc">Erstelle dein persönliches LinkedIn-Visual und teile es mit deinem Netzwerk.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- FORM PANEL -->
+  <div class="form-panel">
+    <h2>Dein Visual gestalten</h2>
+
+    <!-- FOTO -->
+    <div class="form-section">
+      <div class="form-section-title">📷 Dein Foto</div>
+      <div class="upload-area" id="upload-area">
+        <input type="file" accept="image/*" id="photo-input">
+        <img id="upload-thumb" class="upload-thumb" alt="Vorschau">
+        <svg id="upload-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <p id="upload-text"><span>Foto auswählen</span> oder hierher ziehen</p>
+      </div>
+    </div>
+
+    <!-- RAHMEN -->
+    <div class="form-section">
+      <div class="form-section-title">🖼 Rahmen</div>
+      <div class="frame-selector">
+
+        <div class="frame-opt active" onclick="setFrame('polaroid', this)">
+          <div class="frame-thumb ft-polaroid">
+            <div class="ft-photo"></div>
+            <div class="ft-btm"></div>
+            <div class="ft-dot"></div>
+          </div>
+          <span>Polaroid</span>
+        </div>
+
+        <div class="frame-opt" onclick="setFrame('gradient', this)">
+          <div class="frame-thumb ft-gradient"></div>
+          <span>Gradient</span>
+        </div>
+
+        <div class="frame-opt" onclick="setFrame('cinematic', this)">
+          <div class="frame-thumb ft-cinematic"></div>
+          <span>Cinematic</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TEXT -->
+    <div class="form-section">
+      <div class="form-section-title">💬 Text</div>
+      <div class="text-mode-group">
+        <div class="text-mode-opt" onclick="setTextMode('none', this)">
+          <input type="radio" name="tmode" value="none" id="tmode-none">
+          <label for="tmode-none">Kein Text</label>
+        </div>
+        <div class="text-mode-opt active" onclick="setTextMode('auto', this)">
+          <input type="radio" name="tmode" value="auto" id="tmode-auto" checked>
+          <label for="tmode-auto">Event-Text (automatisch)</label>
+        </div>
+        <div class="text-mode-opt" onclick="setTextMode('custom', this)">
+          <input type="radio" name="tmode" value="custom" id="tmode-custom">
+          <label for="tmode-custom">Eigener Text</label>
+        </div>
+      </div>
+      <div class="event-text-preview" id="auto-text-preview">Wird geladen…</div>
+      <div class="form-group" id="custom-text-group" style="display:none">
+        <label>Dein Text <span id="char-count" style="font-weight:400;font-size:0.72rem;letter-spacing:0">0 / 120</span></label>
+        <textarea id="input-custom-text" maxlength="120" placeholder="z.B. Endlich dabei! Toller Austausch beim letzten Apéro. #HNHH" oninput="onCustomText()"></textarea>
+      </div>
+    </div>
+
+    <!-- DATEN -->
+    <div class="form-section">
+      <div class="form-section-title">👤 Deine Daten</div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="input-name" placeholder="Vorname Nachname" oninput="renderCard()">
+      </div>
+      <div class="form-group">
+        <label>Rolle / Unternehmen <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.72rem">(optional)</span></label>
+        <input type="text" id="input-role" placeholder="z.B. Co-Founder · HealthTech GmbH" oninput="renderCard()">
+      </div>
+      <div class="form-group">
+        <label>Circle <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.72rem">(optional)</span></label>
+        <div class="select-wrap">
+          <select id="input-circle" onchange="renderCard()">
+            <option value="">— Circle wählen —</option>
+            <optgroup label="A · System, Policy &amp; Regulation">
+              <option>Health Policy &amp; Public Health</option>
+              <option>Legal &amp; Regulatory</option>
+            </optgroup>
+            <optgroup label="B · Innovation, Ventures &amp; Financing">
+              <option>Startups &amp; New Ventures</option>
+              <option>Funding &amp; Financing</option>
+            </optgroup>
+            <optgroup label="C · Technology, Evidence &amp; Care">
+              <option>Technology &amp; AI</option>
+              <option>Science &amp; Evidence</option>
+              <option>Health Care Professionals &amp; Patients</option>
+            </optgroup>
+            <optgroup label="D · Community, Partnerships &amp; Visibility">
+              <option>Partnerships &amp; Member Activation</option>
+              <option>Apéros &amp; Events</option>
+              <option>Marketing &amp; Communication</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOWNLOAD -->
+    <button class="btn-download" id="btn-download" onclick="downloadCard()">
+      ⬇ Visual herunterladen
+    </button>
+    <div class="linkedin-hint">
+      <strong style="display:block;margin-bottom:3px">💡 LinkedIn-Tipp</strong>
+      Beim Teilen als Beitrag: Quadratisches Format wählen. Markiere <strong>#HNHH</strong> und <strong>#HealthNetworkHamburg</strong> für mehr Reichweite.
+    </div>
+
+  </div>
+
+  <!-- PREVIEW PANEL -->
+  <div class="preview-panel">
+    <h2>Vorschau</h2>
+    <div class="card-tilt-wrap tilt" id="card-tilt-wrap">
+      <div id="card-canvas" class="f-polaroid">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">&copy; <span id="year"></span> Health Network Hamburg e.V.</div>
+  <div class="footer-links">
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   LOGO SVG — inline, no external deps, export-safe
+═══════════════════════════════════════════════════ */
+const LOGO_SVG_RAW = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.38 178.08"><defs><style>.c1{fill:#1d1d1b}.c2{fill:#da151c}</style></defs><g><g><g><polygon class="c1" points="16.73 69.85 4.42 69.85 4.42 60.03 0 60.03 0 83.83 4.42 83.83 4.42 73.63 16.73 73.63 16.73 83.83 21.11 83.83 21.11 60.03 16.73 60.03 16.73 69.85"/><polygon class="c1" points="54.23 80.09 40.8 80.09 40.8 73.56 52.29 73.56 52.29 69.92 40.8 69.92 40.8 63.77 53.75 63.77 53.75 60.03 36.38 60.03 36.38 83.83 54.23 83.83 54.23 80.09"/><path class="c1" d="M71.52,78.32h11.9l2.36,5.51h4.66l-10.74-23.8h-4.35l-10.71,23.8h4.52l2.37-5.51ZM77.48,64.43l4.46,10.42h-8.93l4.47-10.42Z"/><polygon class="c1" points="106.73 60.03 102.31 60.03 102.31 83.83 119.17 83.83 119.17 80.09 106.73 80.09 106.73 60.03"/><polygon class="c1" points="133.79 83.83 138.21 83.83 138.21 63.77 146.1 63.77 146.1 60.03 125.9 60.03 125.9 63.77 133.79 63.77 133.79 83.83"/><polygon class="c1" points="175 60.03 175 69.85 162.69 69.85 162.69 60.03 158.27 60.03 158.27 83.83 162.69 83.83 162.69 73.63 175 73.63 175 83.83 179.38 83.83 179.38 60.03 175 60.03"/><polygon class="c1" points="35.85 109.83 35.85 95.83 33.29 95.83 33.29 105.32 25.57 95.83 23.43 95.83 23.43 109.83 26.01 109.83 26.01 100.33 33.71 109.83 35.85 109.83"/><polygon class="c1" points="54.53 107.63 46.63 107.63 46.63 103.79 53.39 103.79 53.39 101.65 46.63 101.65 46.63 98.03 54.25 98.03 54.25 95.83 44.03 95.83 44.03 109.83 54.53 109.83 54.53 107.63"/><polygon class="c1" points="60.03 98.03 64.67 98.03 64.67 109.83 67.27 109.83 67.27 98.03 71.91 98.03 71.91 95.83 60.03 95.83 60.03 98.03"/><polygon class="c1" points="96.05 95.83 92.46 106.53 88.93 95.83 86.53 95.83 82.91 106.48 79.43 95.83 76.73 95.83 81.37 109.83 84.17 109.83 87.67 99.48 91.13 109.83 93.89 109.83 98.53 95.83 96.05 95.83"/><path class="c1" d="M116.86,97.66c-.67-.65-1.47-1.15-2.39-1.5-.92-.35-1.92-.53-3-.53s-2.1.18-3.02.54c-.92.36-1.72.86-2.4,1.51-.68.65-1.21,1.41-1.58,2.28-.37.87-.56,1.83-.56,2.87s.19,1.98.56,2.85c.37.87.9,1.64,1.58,2.29.68.65,1.48,1.16,2.41,1.52.93.36,1.93.54,3.01.54s2.08-.18,3-.53c.92-.35,1.72-.86,2.39-1.51.67-.65,1.2-1.42,1.57-2.29.37-.87.56-1.83.56-2.87s-.19-2-.56-2.88c-.37-.88-.9-1.64-1.57-2.29ZM116,104.81c-.25.6-.59,1.12-1.03,1.56-.44.44-.96.78-1.55,1.02-.59.24-1.24.36-1.95.36s-1.36-.12-1.97-.36c-.61-.24-1.13-.58-1.57-1.03-.44-.45-.79-.97-1.04-1.57-.25-.6-.38-1.25-.38-1.96s.13-1.38.38-1.97c.25-.59.6-1.11,1.04-1.56.44-.45.96-.79,1.57-1.03.61-.24,1.26-.36,1.97-.36s1.36.12,1.95.36c.59.24,1.11.58,1.56,1.02.45.44.79.96,1.03,1.56.24.6.36,1.26.36,1.98s-.12,1.38-.37,1.98Z"/><path class="c1" d="M137.15,103.45c.48-.73.72-1.61.72-2.64,0-1.55-.53-2.76-1.59-3.65-1.06-.89-2.52-1.33-4.39-1.33h-5.74v14h2.6v-4.08h3.16c.19,0,.36-.01.54-.02l2.86,4.1h2.8l-3.22-4.6c.07-.03.15-.05.21-.08.89-.4,1.57-.97,2.05-1.7ZM134.38,98.76c.58.49.87,1.17.87,2.05s-.29,1.57-.87,2.06-1.44.74-2.59.74h-3.04v-5.58h3.04c1.15,0,2.01.24,2.59.73Z"/><polygon class="c1" points="157.61 95.83 154.67 95.83 147.77 103.01 147.77 95.83 145.17 95.83 145.17 109.83 147.77 109.83 147.77 106.22 149.99 103.97 154.93 109.83 157.99 109.83 151.72 102.08 157.61 95.83"/><polygon class="c2" points="41.09 124.24 35.47 124.24 35.47 120.03 34.07 120.03 34.07 129.83 35.47 129.83 35.47 125.46 41.09 125.46 41.09 129.83 42.49 129.83 42.49 120.03 41.09 120.03 41.09 124.24"/><path class="c2" d="M49.51,120.03l-4.44,9.8h1.44l1.08-2.45h5.21l1.08,2.45h1.47l-4.45-9.8h-1.39ZM48.08,126.26l2.11-4.81,2.11,4.81h-4.23Z"/><polygon class="c2" points="67.19 120.03 63.16 126.91 59.07 120.03 57.92 120.03 57.92 129.83 59.27 129.83 59.27 122.72 62.81 128.64 63.45 128.64 66.99 122.68 67.01 129.83 68.35 129.83 68.34 120.03 67.19 120.03"/><path class="c2" d="M79.44,124.91c-.15-.07-.31-.11-.48-.15.01,0,.03,0,.04-.02.4-.2.72-.48.96-.84.24-.36.36-.81.36-1.34,0-.78-.3-1.4-.91-1.85-.61-.45-1.47-.68-2.6-.68h-4.4v9.8h4.68c1.24,0,2.18-.23,2.81-.69s.95-1.11.95-1.95c0-.56-.13-1.03-.38-1.41-.25-.38-.59-.66-1.02-.86ZM76.68,121.16c.71,0,1.26.13,1.65.39.39.26.59.65.59,1.18s-.2.92-.59,1.18c-.39.26-.94.39-1.65.39h-2.87v-3.14h2.87ZM78.81,128.3c-.41.26-1,.39-1.78.39h-3.22v-3.26h3.22c.77,0,1.37.13,1.78.39.41.26.62.68.62,1.25s-.21.97-.62,1.23Z"/><path class="c2" d="M90.98,125.54c0,1.09-.24,1.89-.72,2.39s-1.16.76-2.05.76-1.56-.25-2.04-.76-.72-1.3-.72-2.39v-5.52h-1.4v5.57c0,1.42.37,2.5,1.11,3.23.74.74,1.75,1.11,3.04,1.11s2.31-.37,3.04-1.11c.73-.74,1.1-1.81,1.1-3.23v-5.57h-1.36v5.52Z"/><path class="c2" d="M102.34,126.44c.61-.27,1.07-.66,1.4-1.17.33-.51.49-1.12.49-1.83,0-1.07-.36-1.91-1.09-2.51-.73-.6-1.73-.9-3-.9h-3.82v9.8h1.4v-2.98h2.42c.22,0,.4-.03.6-.05l2.13,3.03h1.53l-2.34-3.3c.09-.03.2-.05.28-.09ZM100.1,125.65h-2.38v-4.41h2.38c.9,0,1.58.19,2.04.57s.69.92.69,1.62-.23,1.24-.69,1.63-1.14.58-2.04.58Z"/><path class="c2" d="M109.32,122.22c.35-.34.77-.6,1.25-.78.48-.19,1-.28,1.56-.28s1.06.09,1.53.27c.47.18.91.47,1.31.86l.87-.87c-.45-.5-.99-.88-1.64-1.13-.64-.25-1.35-.38-2.13-.38s-1.46.12-2.1.37c-.63.25-1.19.6-1.66,1.05-.47.45-.84.98-1.1,1.59-.26.61-.39,1.27-.39,2s.13,1.4.39,2c.26.61.62,1.14,1.09,1.59.47.45,1.02.8,1.65,1.05.63.25,1.33.37,2.09.37.69,0,1.36-.1,2.01-.31.65-.21,1.21-.52,1.7-.93v-3.82h-1.34v3.18c-.25.17-.51.31-.79.4-.48.16-.98.25-1.5.25-.56,0-1.08-.09-1.55-.28-.48-.19-.89-.45-1.24-.79-.35-.34-.62-.74-.81-1.2-.19-.46-.29-.96-.29-1.49s.1-1.04.29-1.5c.19-.46.46-.86.81-1.2Z"/><path class="c2" d="M128.06,122.81c-.55-.32-1.19-.48-1.9-.48s-1.35.16-1.91.48c-.57.32-1.01.77-1.33,1.34-.32.57-.48,1.22-.48,1.96s.17,1.39.5,1.96.8,1.02,1.4,1.34c.6.33,1.3.49,2.09.49.62,0,1.17-.1,1.67-.31.5-.21.92-.5,1.25-.9l-.74-.87c-.27.3-.59.52-.94.67-.36.15-.76.22-1.2.22-.53,0-1-.11-1.41-.32-.41-.21-.73-.52-.96-.9-.17-.28-.25-.6-.3-.95h6c0-.06.02-.13.02-.21,0-.07,0-.14,0-.2,0-.77-.16-1.44-.47-2.01-.31-.57-.74-1.02-1.29-1.34ZM124.91,123.78c.36-.21.78-.31,1.25-.31s.89.1,1.25.31c.36.21.64.5.85.88.15.28.23.6.26.94h-4.73c.04-.34.12-.65.27-.93.21-.38.49-.67.85-.88Z"/><path class="c2" d="M132.85,127.99c-.26,0-.49.09-.67.27s-.28.41-.28.69.09.51.28.69.41.27.67.27.47-.09.65-.27.27-.41.27-.69-.09-.51-.27-.69-.4-.27-.65-.27Z"/><polygon class="c2" points="139.22 128.08 135.69 120.03 134.18 120.03 138.49 129.83 139.88 129.83 144.17 120.03 142.77 120.03 139.22 128.08"/><path class="c2" d="M145.24,127.99c-.26,0-.49.09-.67.27s-.28.41-.28.69.09.51.28.69.41.27.67.27.47-.09.65-.27.27-.41.27-.69-.09-.51-.27-.69-.4-.27-.65-.27Z"/></g><g><path class="c1" d="M171.76,49.82c-.36,0-.71-.2-.89-.54C156.75,21.84,128.86,3.77,98.07,2.12c-15.29-.82-30.56,2.41-44.13,9.33-.49.25-1.09.05-1.34-.44-.25-.49-.06-1.09.44-1.35C66.92,2.59,82.54-.71,98.18.13c31.49,1.68,60.02,20.16,74.47,48.23.25.49.06,1.09-.43,1.35-.15.08-.3.11-.46.11Z"/><path class="c1" d="M93.5,178.08c-1.6,0-3.21-.04-4.81-.13-41.29-2.21-75.34-32.1-82.82-72.71-.1-.54.26-1.06.8-1.16.54-.1,1.06.26,1.16.8,7.31,39.69,40.6,68.92,80.96,71.07,7.99.43,15.96-.23,23.69-1.96.54-.12,1.07.22,1.19.76.12.54-.22,1.07-.76,1.19-6.35,1.42-12.87,2.14-19.42,2.14Z"/></g></g></g></svg>`;
+
+function toUri(svgStr) {
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
+}
+
+// Only one version needed: original colors everywhere
+// (on dark backgrounds we wrap the logo in a white badge)
+const URI_COLOR = toUri(LOGO_SVG_RAW);
+
+/* ═══════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════ */
+let currentFrame    = 'polaroid';
+let currentTextMode = 'auto';
+let photoDataUrl    = null;
+
+// Fallback event data — shows immediately, overridden if sheet loads
+// ↓ Update this manually if sheet access is unavailable
+let eventData = {
+  nummer:  '15',
+  label:   'Health Apéro',
+  titel:   'Apéro Vol. 15',
+  datum:   '24.06.2026',
+  uhrzeit: '19–21 Uhr',
+  ort:     'Hamburg'
+};
+
+/* ═══════════════════════════════════════════════════
+   SHEET INTEGRATION
+═══════════════════════════════════════════════════ */
+const SHEET_ID = '1inAiEvDK3ORJUCkBkaTZVbK8PWJ7U8gIlV3hpEJoXMw';
+
+function parseCSV(text) {
+  var rows = [], i = 0, n = text.length;
+  while (i < n) {
+    var row = [];
+    while (i < n && text[i] !== '\n') {
+      var f = '';
+      if (text[i] === '"') {
+        i++;
+        while (i < n) {
+          if (text[i] === '"') { if (text[i+1] === '"') { f += '"'; i += 2; } else { i++; break; } }
+          else f += text[i++];
+        }
+      } else { while (i < n && text[i] !== ',' && text[i] !== '\n') f += text[i++]; }
+      row.push(f);
+      if (i < n && text[i] === ',') i++;
+    }
+    if (i < n && text[i] === '\n') i++;
+    if (row.some(c => c.trim())) rows.push(row);
+  }
+  return rows;
+}
+
+function loadEventData() {
+  var url = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID +
+    '/gviz/tq?tqx=out:csv&sheet=Events-upcoming';
+  fetch(url)
+    .then(r => r.text())
+    .then(text => {
+      var rows = parseCSV(text).slice(1); // skip header
+      // Find row where LinkedIn-Visual column (index 11) = 'x'
+      var match = rows.find(r => (r[11] || '').trim().toLowerCase() === 'x');
+      if (match) {
+        // cols: 0=Code,1=Typ,2=Nummer,3=Label,4=Titel,5=Datum,6=Uhrzeit,7=Ort,8=Beschreibung,9=Embed-URL,10=Kalender,11=LinkedIn-Visual
+        eventData = {
+          nummer: (match[2] || '').trim(),
+          label:  (match[3] || '').trim(),
+          titel:  (match[4] || '').trim(),
+          datum:  (match[5] || '').trim(),
+          uhrzeit:(match[6] || '').trim(),
+          ort:    (match[7] || '').trim()
+        };
+        updateHero();
+        updateAutoTextPreview();
+        renderCard();
+      } else {
+        // No active event found — keep defaults
+        updateAutoTextPreview();
+      }
+    })
+    .catch(() => {
+      // Fallback: no sheet access (e.g. local file open)
+      updateAutoTextPreview();
+    });
+}
+
+function getAutoText() {
+  if (!eventData) return '#HNHH · Health Network Hamburg';
+  var t = eventData.titel ? 'Dabei beim ' + eventData.titel : 'Ich war dabei!';
+  if (eventData.datum) t += ' · ' + eventData.datum;
+  t += ' #HNHH';
+  return t;
+}
+
+function getShortAutoText() {
+  // Short version for Polaroid bottom strip
+  if (!eventData) return '#HNHH';
+  var t = eventData.titel || '';
+  if (eventData.datum) t += ' · ' + eventData.datum;
+  return t;
+}
+
+function updateHero() {
+  if (!eventData) return;
+  var ey = document.getElementById('hero-eyebrow');
+  var ht = document.getElementById('hero-title');
+  var hd = document.getElementById('hero-desc');
+  if (ey) ey.textContent = '#HNHH · ' + (eventData.label || 'Apéro');
+  if (ht) ht.textContent = 'Ich war dabei!';
+  if (hd) hd.textContent = 'Erstelle dein persönliches LinkedIn-Visual für den ' +
+    (eventData.titel || 'Apéro') + ' und teile es mit deinem Netzwerk.';
+  document.title = (eventData.titel || 'Apéro') + ' – Ich war dabei! | Health Network Hamburg e.V.';
+}
+
+function updateAutoTextPreview() {
+  var el = document.getElementById('auto-text-preview');
+  if (!el) return;
+  el.textContent = '"' + getAutoText() + '"';
+  if (currentTextMode === 'auto') el.style.display = 'block';
+}
+
+/* ═══════════════════════════════════════════════════
+   FRAME & TEXT MODE
+═══════════════════════════════════════════════════ */
+function setFrame(name, el) {
+  currentFrame = name;
+  document.querySelectorAll('.frame-opt').forEach(o => o.classList.remove('active'));
+  if (el) el.classList.add('active');
+  var wrap = document.getElementById('card-tilt-wrap');
+  if (name === 'polaroid') {
+    wrap.classList.add('tilt');
+    wrap.classList.remove('shadow-flat');
+  } else {
+    wrap.classList.remove('tilt');
+    wrap.classList.add('shadow-flat');
+  }
+  renderCard();
+}
+
+function setTextMode(mode, el) {
+  currentTextMode = mode;
+  document.querySelectorAll('.text-mode-opt').forEach(o => o.classList.remove('active'));
+  if (el) el.classList.add('active');
+  document.querySelectorAll('input[name="tmode"]').forEach(r => r.checked = r.value === mode);
+  var preview = document.getElementById('auto-text-preview');
+  var customGroup = document.getElementById('custom-text-group');
+  preview.style.display     = mode === 'auto'   ? 'block' : 'none';
+  customGroup.style.display = mode === 'custom' ? 'block' : 'none';
+  renderCard();
+}
+
+function onCustomText() {
+  var v = document.getElementById('input-custom-text').value;
+  var counter = document.getElementById('char-count');
+  counter.textContent = v.length + ' / 120';
+  counter.classList.toggle('warn', v.length > 100);
+  renderCard();
+}
+
+/* ═══════════════════════════════════════════════════
+   PHOTO UPLOAD
+═══════════════════════════════════════════════════ */
+(function() {
+  var input = document.getElementById('photo-input');
+  var area  = document.getElementById('upload-area');
+  var thumb = document.getElementById('upload-thumb');
+  var icon  = document.getElementById('upload-icon');
+  var text  = document.getElementById('upload-text');
+
+  input.addEventListener('change', handleFile);
+
+  // Drag & drop
+  area.addEventListener('dragover', e => { e.preventDefault(); area.style.borderColor = 'var(--rot)'; });
+  area.addEventListener('dragleave', () => { area.style.borderColor = ''; });
+  area.addEventListener('drop', e => {
+    e.preventDefault(); area.style.borderColor = '';
+    if (e.dataTransfer.files[0]) { input.files = e.dataTransfer.files; handleFile(); }
+  });
+
+  function handleFile() {
+    var file = input.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev) {
+      photoDataUrl = ev.target.result;
+      thumb.src = photoDataUrl;
+      thumb.style.display = 'block';
+      icon.style.display = 'none';
+      text.innerHTML = '<span>Anderes Foto wählen</span>';
+      area.classList.add('has-photo');
+      renderCard();
+    };
+    reader.readAsDataURL(file);
+  }
+})();
+
+/* ═══════════════════════════════════════════════════
+   CARD RENDER
+═══════════════════════════════════════════════════ */
+function getInputs() {
+  return {
+    name:   (document.getElementById('input-name').value || '').trim(),
+    role:   (document.getElementById('input-role').value || '').trim(),
+    circle: (document.getElementById('input-circle').value || '').trim(),
+    custom: (document.getElementById('input-custom-text').value || '').trim()
+  };
+}
+
+function getTextContent(short) {
+  if (currentTextMode === 'none') return '';
+  if (currentTextMode === 'auto') return short ? getShortAutoText() : getAutoText();
+  if (currentTextMode === 'custom') return (document.getElementById('input-custom-text').value || '').trim();
+  return '';
+}
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+function photoStyle() {
+  return photoDataUrl
+    ? 'background-image:url("' + photoDataUrl + '")'
+    : '';
+}
+
+/* ── POLAROID ── */
+function buildPolaroid(inp) {
+  var text   = getTextContent(true);  // short version for polaroid
+  var noPhoto = !photoDataUrl;
+
+  var photoEl = noPhoto
+    ? `<div class="pol-photo no-photo">
+         <div class="pol-photo-placeholder">
+           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+           <p>Foto hochladen</p>
+         </div>
+       </div>`
+    : `<div class="pol-photo" style="${esc(photoStyle())}"></div>`;
+
+  var labelEl = eventData ? `<span class="pol-event-label">${esc(eventData.label || '')}</span>` : '';
+  var dateEl  = eventData && eventData.datum ? `<div class="pol-date">${esc(eventData.datum)}</div>` : '';
+  var nameEl  = inp.name  ? `<div class="pol-name">${esc(inp.name)}</div>` : '<div class="pol-name" style="color:#ccc">Dein Name</div>';
+  var roleEl  = inp.role  ? `<div class="pol-role">${esc(inp.role)}</div>` : '';
+  var circleEl= inp.circle? `<div class="pol-role" style="color:#C8102E;font-weight:600">${esc(inp.circle)}</div>` : '';
+  var textEl  = text      ? `<div class="pol-text">${esc(text)}</div>` : '';
+
+  return `
+    ${photoEl}
+    <div class="pol-bottom">
+      <div class="pol-logo-row">
+        <img src="${URI_COLOR}" class="pol-logo-img" alt="HNHH">
+        ${labelEl}
+      </div>
+      ${nameEl}
+      ${roleEl}
+      ${circleEl}
+      ${textEl}
+      ${dateEl}
+    </div>`;
+}
+
+/* ── GRADIENT ── */
+function buildGradient(inp) {
+  var text    = getTextContent(false);
+  var noPhoto = !photoDataUrl;
+
+  var photoEl = noPhoto
+    ? `<div class="grd-photo no-photo"></div>`
+    : `<div class="grd-photo" style="${esc(photoStyle())}"></div>`;
+
+  var tagLabel = eventData ? esc(eventData.label || 'Health Apéro') : 'Health Apéro';
+  var tagDate  = eventData && eventData.datum ? ' · ' + esc(eventData.datum) : '';
+  var textEl   = text ? `<div class="grd-event-text">${esc(text)}</div>` : '';
+  var nameEl   = inp.name   ? `<div class="grd-name">${esc(inp.name)}</div>` : '<div class="grd-name" style="color:rgba(255,255,255,0.3)">Dein Name</div>';
+  var roleEl   = inp.role   ? `<div class="grd-role">${esc(inp.role)}</div>` : '';
+  var circleEl = inp.circle ? `<div class="grd-badge">${esc(inp.circle)}</div>` : '<div class="grd-badge">Health Network Hamburg</div>';
+
+  return `
+    ${photoEl}
+    <div class="grd-overlay-top"></div>
+    <div class="grd-overlay-bottom"></div>
+    <div class="grd-topbar">
+      <div class="logo-badge"><img src="${URI_COLOR}" class="grd-logo" alt="HNHH"></div>
+      <span class="grd-tag">${tagLabel}${tagDate}</span>
+    </div>
+    <div class="grd-content">
+      ${textEl}
+      ${nameEl}
+      ${roleEl}
+      ${circleEl}
+    </div>`;
+}
+
+/* ── CINEMATIC ── */
+function buildCinematic(inp) {
+  var text    = getTextContent(false);
+  var noPhoto = !photoDataUrl;
+
+  var photoEl = noPhoto
+    ? `<div class="cin-photo no-photo"></div>`
+    : `<div class="cin-photo" style="${esc(photoStyle())}"></div>`;
+
+  var hashtag  = '#HNHH';
+  var nameEl   = inp.name   ? `<div class="cin-name">${esc(inp.name)}</div>` : '<div class="cin-name" style="color:rgba(255,255,255,0.2)">Dein Name</div>';
+  var roleEl   = inp.role   ? `<div class="cin-role">${esc(inp.role)}</div>` : (inp.circle ? '' : '<div class="cin-role" style="opacity:0.3">Health Network Hamburg e.V.</div>');
+  var circleEl = inp.circle ? `<div class="cin-role">${esc(inp.circle)}</div>` : '';
+  var textEl   = text ? `<div class="cin-event-text">${esc(text)}</div>` : '';
+
+  return `
+    ${photoEl}
+    <div class="cin-vignette"></div>
+    <div class="cin-accent"></div>
+    <div class="cin-accent-b"></div>
+    <div class="cin-bar-top">
+      <div class="logo-badge"><img src="${URI_COLOR}" class="cin-logo" alt="HNHH"></div>
+      <span class="cin-hashtag">${esc(hashtag)}</span>
+    </div>
+    <div class="cin-bar-bottom">
+      ${nameEl}
+      ${circleEl || roleEl}
+      ${textEl}
+    </div>`;
+}
+
+function renderCard() {
+  var card = document.getElementById('card-canvas');
+  var inp  = getInputs();
+
+  card.className = 'f-' + currentFrame;
+
+  switch (currentFrame) {
+    case 'polaroid':  card.innerHTML = buildPolaroid(inp);  break;
+    case 'gradient':  card.innerHTML = buildGradient(inp);  break;
+    case 'cinematic': card.innerHTML = buildCinematic(inp); break;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   DOWNLOAD — high quality, mobile-safe
+═══════════════════════════════════════════════════ */
+async function downloadCard() {
+  var btn  = document.getElementById('btn-download');
+  var card = document.getElementById('card-canvas');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Wird erstellt…';
+
+  // Wait for fonts & images
+  try { await document.fonts.ready; } catch(e) {}
+  await new Promise(r => setTimeout(r, 150));
+
+  // Use at least 2× scale for crisp export on all devices
+  var dpr   = Math.max(2, window.devicePixelRatio || 2);
+  var scale = Math.min(dpr * 1.5, 4); // cap at 4x to avoid memory issues
+
+  try {
+    var canvas = await html2canvas(card, {
+      scale:         scale,
+      useCORS:       false,   // all resources are inline data URIs — no CORS needed
+      allowTaint:    true,
+      backgroundColor: currentFrame === 'polaroid' ? '#ffffff' : '#1a1a1a',
+      imageTimeout:  5000,
+      logging:       false,
+      // Ensure img tags with data URIs render correctly
+      onclone: function(clonedDoc) {
+        var clonedCard = clonedDoc.getElementById('card-canvas');
+        if (clonedCard) {
+          // Ensure no transform is applied during capture
+          clonedCard.style.transform = 'none';
+          clonedCard.style.webkitTransform = 'none';
+        }
+      }
+    });
+
+    var eventLabel = eventData ? eventData.titel.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '') : 'apero';
+    var inp  = getInputs();
+    var name = inp.name ? '-' + inp.name.split(' ').join('-') : '';
+    var filename = 'HNHH-Visual-' + eventLabel + name + '.png';
+
+    canvas.toBlob(function(blob) {
+      var url = URL.createObjectURL(blob);
+      var a   = document.createElement('a');
+      a.href     = url;
+      a.download = filename;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+
+      btn.disabled = false;
+      btn.textContent = '⬇ Visual herunterladen';
+    }, 'image/png', 1.0);
+
+  } catch(err) {
+    console.error('Export error:', err);
+    btn.disabled = false;
+    btn.textContent = '⬇ Visual herunterladen';
+    alert('Export fehlgeschlagen. Bitte erneut versuchen.');
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════ */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Set header logo
+var hdrLogo = document.getElementById('header-logo');
+if (hdrLogo) hdrLogo.src = URI_COLOR;
+
+// Show fallback data immediately, then override from sheet
+updateHero();
+updateAutoTextPreview();
+renderCard();
+
+// Try to load live sheet data (overrides fallback if successful)
+loadEventData();
+
+// Hamburger menu
+document.getElementById('hamburger').onclick = function() {
+  document.getElementById('main-nav').classList.toggle('open');
+};
+</script>
+</body>
+</html>
